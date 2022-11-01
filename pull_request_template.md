@@ -11,6 +11,7 @@ Please check the type of change your PR introduces:
 _What problem are you trying to solve?_
 ## Solution
 _How did you solve the problem?_
+- Followed the Github Docs
 ## Other changes (e.g. bug fixes, UI tweaks, small refactors)
 ## Checklist
 - [ ] Code compiles correctly
