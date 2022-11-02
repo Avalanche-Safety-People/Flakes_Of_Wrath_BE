@@ -12,15 +12,6 @@
 
 ActiveRecord::Schema.define(version: 2022_11_02_190701) do
 
-  create_table "areas", force: :cascade do |t|
-    t.string "name"
-    t.string "url"
-    t.string "state"
-    t.integer "zone_id"
-    t.float "latitude"
-    t.float "longitude"
-  end
-
   create_table "emergency_contacts", force: :cascade do |t|
     t.string "name"
     t.string "phone_number"
@@ -32,5 +23,4 @@ ActiveRecord::Schema.define(version: 2022_11_02_190701) do
     t.string "dates"
     t.string "description"
   end
-
 end
