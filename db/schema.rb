@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_11_02_154009) do
+ActiveRecord::Schema.define(version: 2022_11_02_185734) do
 
   create_table "areas", force: :cascade do |t|
     t.string "name"
@@ -19,6 +19,13 @@ ActiveRecord::Schema.define(version: 2022_11_02_154009) do
     t.integer "zone_id"
     t.float "latitude"
     t.float "longitude"
+  end
+
+  create_table "trips", force: :cascade do |t|
+    t.string "name"
+    t.string "trip_zone"
+    t.string "dates"
+    t.string "description"
   end
 
 end
