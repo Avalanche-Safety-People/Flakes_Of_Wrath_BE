@@ -1,0 +1,14 @@
+{
+	"$schema": "Insert Area DB Schema Link Here",
+	"type": "object",
+	"properties": {
+		"id": { "type": "integer" },
+		"name": { "type": "string" },
+		"url": { "type": "string" },
+    "state": { "type": "string" },
+		"zone_id": { "type": "integer" }
+		},
+	"required": [
+		"id", "name", "url", "state", "zone_id"
+	]
+}
