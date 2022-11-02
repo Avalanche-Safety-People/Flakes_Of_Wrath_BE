@@ -8,10 +8,6 @@ class AreaService
 
  def self.areas
   response = conn.get('/v2/public/product?type=forecast&center_id=NWAC&zone_id=427')
-  parse(response.body)
- end
-
- def parse(response)
-  JSON.parse(response, symbolize_names: true)
+  body = JSON.parse(response.body, symbolize_names: true)[:forecast_zone]
  end
 end
