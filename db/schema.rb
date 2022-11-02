@@ -10,17 +10,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_11_02_190701) do
+ActiveRecord::Schema.define(version: 2022_11_02_233626) do
 
   create_table "emergency_contacts", force: :cascade do |t|
+    t.integer "user_id"
     t.string "name"
     t.string "phone_number"
+    t.index ["user_id"], name: "index_emergency_contacts_on_user_id"
   end
 
   create_table "trips", force: :cascade do |t|
+    t.integer "user_id"
     t.string "name"
     t.string "trip_zone"
     t.string "dates"
     t.string "description"
+    t.index ["user_id"], name: "index_trips_on_user_id"
   end
+
+  create_table "users", force: :cascade do |t|
+    t.string "uid"
+    t.string "provider"
+    t.string "name"
+    t.string "email"
+    t.string "favorite_zone"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
 end
