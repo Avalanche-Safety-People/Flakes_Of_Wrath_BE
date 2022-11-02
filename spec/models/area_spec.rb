@@ -1,13 +1,13 @@
 require 'rails_helper'
 
-RSpec.describe 'The Area Model' do
+RSpec.describe Area, type: :model do
  describe 'validations' do
   it { should validate_presence_of :name }
   it { should validate_presence_of :url }
   it { should validate_presence_of :state }
   it { should validate_presence_of :zone_id }
   it { should validate_presence_of :latitude }
-  it {should validate_presence_of :longitude }
+  it { should validate_presence_of :longitude }
  end
 
  describe 'relationships' do
@@ -27,7 +27,7 @@ RSpec.describe 'The Area Model' do
    expect(@area_1.name).to eq('Noah Pass')
    expect(@area_1.url).to eq('http://www.dagreatestpass.com')
    expect(@area_1.state).to eq('CO')
-   expect(@area_1.zone).to eq(7)
+   expect(@area_1.zone_id).to eq(7)
    expect(@area_1.latitude).to eq(41.40338)
    expect(@area_1.longitude).to eq(2.17403)
   end
