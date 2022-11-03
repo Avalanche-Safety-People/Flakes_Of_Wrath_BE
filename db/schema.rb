@@ -10,17 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_11_02_233626) do
+ActiveRecord::Schema.define(version: 2022_11_02_190701) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "emergency_contacts", force: :cascade do |t|
-    t.integer "user_id"
+    t.bigint "user_id"
     t.string "name"
     t.string "phone_number"
     t.index ["user_id"], name: "index_emergency_contacts_on_user_id"
   end
 
   create_table "trips", force: :cascade do |t|
-    t.integer "user_id"
+    t.bigint "user_id"
     t.string "name"
     t.string "trip_zone"
     t.string "dates"
@@ -38,4 +41,6 @@ ActiveRecord::Schema.define(version: 2022_11_02_233626) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "emergency_contacts", "users"
+  add_foreign_key "trips", "users"
 end
