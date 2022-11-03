@@ -8,7 +8,7 @@ RSpec.describe "Users", type: :request do
 
     it "GET /api/v1/users" do
       user = File.read("spec/fixtures/user_example.json")
-      require "pry"; binding.pry
+      
     end
   end
 end
