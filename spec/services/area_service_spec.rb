@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'Area Service' do
+RSpec.describe 'Area Service', :vcr do
   it 'gets a response for all areas in the state' do
     areas = AreaService.areas
 

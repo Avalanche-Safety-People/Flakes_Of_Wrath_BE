@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'Area Facade' do
+RSpec.describe 'Area Facade', :vcr do
  it 'is an array of zone objects' do
   areas = AreaFacade.area_details
 
