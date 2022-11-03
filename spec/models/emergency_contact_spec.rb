@@ -12,7 +12,8 @@ RSpec.describe EmergencyContact, type: :model do
 
  describe 'attributes' do
   before :each do
-   @contact_1 = EmergencyContact.create!(name: 'Kaelin', phone_number: '303-555-5555')
+   @user_1 = User.create!(uid: "107509505203685220862", provider: "google_oauth2", name: "Gavin", email: "gavin@guhmail.com")
+   @contact_1 = @user_1.emergency_contacts.create!(name: 'Kaelin', phone_number: '303-555-5555')
   end
 
   it 'instance of' do

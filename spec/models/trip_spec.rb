@@ -14,7 +14,8 @@ RSpec.describe Trip, type: :model do
 
  describe 'attributes' do
   before :each do
-   @trip_1 = Trip.create!(name: 'Ski Trip', trip_zone: 'Noah Pass', dates: '12/20/2022 - 12/23/2022', description: 'Going skiing!')
+   @user_1 = User.create!(uid: "107509505203685220862", provider: "google_oauth2", name: "Gavin", email: "gavin@guhmail.com")
+   @trip_1 = @user_1.trips.create!(name: 'Ski Trip', trip_zone: 'Noah Pass', dates: '12/20/2022 - 12/23/2022', description: 'Going skiing!')
   end
 
   it 'instance of' do
