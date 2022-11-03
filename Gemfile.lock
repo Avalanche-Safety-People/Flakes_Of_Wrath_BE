@@ -83,19 +83,18 @@ GEM
     marcel (1.0.2)
     method_source (1.0.0)
     mini_mime (1.1.2)
+    mini_portile2 (2.8.0)
     minitest (5.16.3)
     msgpack (1.6.0)
     nio4r (2.5.8)
-    nokogiri (1.13.9-x86_64-darwin)
+    nokogiri (1.13.9)
+      mini_portile2 (~> 2.8.0)
       racc (~> 1.4)
     pg (1.4.4)
     pry (0.14.1)
       coderay (~> 1.1)
       method_source (~> 1.0)
     public_suffix (5.0.0)
-    pry (0.14.1)
-      coderay (~> 1.1)
-      method_source (~> 1.0)
     puma (3.12.6)
     racc (1.6.0)
     rack (2.2.4)
@@ -147,7 +146,6 @@ GEM
       rspec-mocks (~> 3.10)
       rspec-support (~> 3.10)
     rspec-support (3.12.0)
-    rspec-support (3.11.1)
     ruby2_keywords (0.0.5)
     ruby_dep (1.5.0)
     shoulda-matchers (5.2.0)
@@ -183,17 +181,16 @@ GEM
     websocket-extensions (0.1.5)
 
 PLATFORMS
-  x86_64-darwin-21
+  ruby
 
 DEPENDENCIES
   bootsnap (>= 1.1.0)
   byebug
   faraday
   figaro
-  listen (>= 3.0.5, < 3.2)
-  pg
   jsonapi-serializer
   listen (>= 3.0.5, < 3.2)
+  pg
   pry
   puma (~> 3.11)
   rails (~> 5.2.8, >= 5.2.8.1)
@@ -210,4 +207,4 @@ RUBY VERSION
    ruby 2.7.4p191
 
 BUNDLED WITH
-   2.3.21
+   2.1.4
