@@ -1,7 +1,10 @@
 class Api::V1::UsersController < ApplicationController
  def index
-  require "pry"; binding.pry
-  @user = render json: UserSerializer.new(User.find_by(uid: params[:uid]))
-  require "pry"; binding.pry
+  oauth_data = JSON.parse(request.body.read, symbolize_names: true)
+  @user_create = User.find_or_create_by(uid: oauth_data[:uid],
+                                provider: oauth_data[:provider],
+                                name: oauth_data[:info][:name],
+                                email: oauth_data[:info][:email])
+  @user = render json: UserSerializer.new(@user_create)
  end
 end
