@@ -3,16 +3,15 @@
 	"type": "object",
 	"properties": {
 		"id": { "type": "integer" },
-		"username": { "type": "string" },
+		"name": { "type": "string" },
 		"favorite zone": {
 			"type": "number",
 			"minimum": 1,
 			"maximum": 10
-		},
-		"emergency contact id": { "type": "integer" }
+			},
 		},
 	"required": [
-		"username",
+		"name",
 		"id"
 	]
 }
