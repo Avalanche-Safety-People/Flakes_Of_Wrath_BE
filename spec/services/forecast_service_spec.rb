@@ -2,9 +2,10 @@ require 'rails_helper'
 
 RSpec.describe 'OpenWeather API' do
   describe 'Daily Forecast Endpoint' do
-    it 'returns a forecast for daily weather' do
-      days = ForecastService.daily_forecast[:daily]
-      # require 'pry'; binding.pry
+    it 'returns a forecast for daily weather', :vcr do
+      lat = 47.427
+      long = -121.418
+      days = ForecastService.daily_forecast(lat, long)[:daily]
 
       expect(days).to be_a Array
       expect(days.count).to eq 8

@@ -5,8 +5,8 @@ class ForecastService
     end
   end
 
-  def self.daily_forecast
-    response = conn.get('?lat=47.427&lon=-121.418&exclude=minutely,hourly')
+  def self.daily_forecast(lat, long)
+    response = conn.get("?lat=#{lat}&lon=#{long}&exclude=minutely,hourly")
     JSON.parse(response.body, symbolize_names:true)
   end
 end
