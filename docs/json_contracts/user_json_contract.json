@@ -1,0 +1,17 @@
+{
+	"$schema": "Insert User DB Schema Link Here",
+	"type": "object",
+	"properties": {
+		"id": { "type": "integer" },
+		"name": { "type": "string" },
+		"favorite zone": {
+			"type": "number",
+			"minimum": 1,
+			"maximum": 10
+			},
+		},
+	"required": [
+		"name",
+		"id"
+	]
+}

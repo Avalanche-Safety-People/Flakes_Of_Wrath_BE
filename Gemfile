@@ -18,7 +18,7 @@ gem 'puma', '~> 3.11'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
-
+gem 'jsonapi-serializer'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 gem 'simplecov'
@@ -36,6 +36,7 @@ group :development, :test do
   gem 'pry'
   gem 'webmock'
   gem 'vcr'
+  gem 'shoulda-matchers', '~> 5.0'
 end
 
 group :development do

@@ -1,0 +1,14 @@
+{
+	"$schema": "Insert Trip DB Schema Link Here",
+	"type": "object",
+	"properties": {
+		"id": { "type": "integer" },
+		"zone_id": { "type": "integer" },
+		"dates": { "type": "string" },
+		"description": { "type": "string" },
+    "user_id": { "type": "string" }
+		},
+	"required": [
+		"id", "zone id", "dates", "user_id"
+	]
+}

@@ -1,0 +1,14 @@
+{
+	"$schema": "Insert Contact DB Schema Link Here",
+	"type": "object",
+	"properties": {
+		"id": { "type": "integer" },
+		"name": { "type": "string" },
+		"phone number": { "type": "integer" },
+    "email": { "type": "string" }
+		},
+	"required": [
+		"id",
+		"phone number"
+	]
+}

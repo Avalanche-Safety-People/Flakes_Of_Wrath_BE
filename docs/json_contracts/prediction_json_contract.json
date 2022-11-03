@@ -1,0 +1,21 @@
+// all predictions will be returned as an array from current day to 5 days in future
+
+{
+	"$schema": "Insert Prediction DB Schema Link Here",
+	"type": "object",
+	"properties": {
+		"id": { "type": "integer" },
+		"area id": { "type": "integer" },
+    "max temp": { "type": "integer" },
+		"min temp": { "type": "integer" },
+    "wind": { "type": "integer" },
+    "precipitation": { "type": "float" },
+    "snowfall": { "type": "float"},
+    "risk": { "type": "integer/enum"}
+		},
+	"required": [
+		"id",
+		"area_id",
+    "risk"
+	]
+}
