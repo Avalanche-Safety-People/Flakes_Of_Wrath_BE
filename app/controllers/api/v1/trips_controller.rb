@@ -9,4 +9,8 @@ class Api::V1::TripsController < ApplicationController
     # require 'pry';binding.pry
     render json: TripSerializer.new(trips)
   end
+
+  def create
+    
+  end
 end

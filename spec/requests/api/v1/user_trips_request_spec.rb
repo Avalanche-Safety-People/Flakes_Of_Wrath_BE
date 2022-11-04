@@ -28,5 +28,28 @@ RSpec.describe 'User trips' do
       expect(trips).to be_a Hash
       expect(trips[:data]).to be_an Array
     end
+
+    it 'I can create a trip for a user' do 
+      user = create(:user)
+      # new_trip_params = ({
+      #   name: 'asdasd',
+      #   zone_id: '123',
+      #   start_date: Date.new(2023, 3, 2),
+      #   description: 'very snowy',
+      #   user_id: user.id
+      # })
+      new_trip_params = (attributes_for(:trip, user_id: user.id))
+
+      # trip_data = create(:trip, user_id: user.id)
+      post api_v1_user_trips_path(user.id), params: JSON.generate(new_trip_params)
+      # trips_data = create_list(:trip, 5, user_id: user.id)
+      binding.pry
+
+      # get api_v1_user_trips_path(user.id)
+      # expect(response).to be_successful
+      # trips = JSON.parse(response.body, symbolize_names: true)
+      # expect(trips).to be_a Hash
+      # expect(trips[:data]).to be_an Array
+    end
   end
 end
