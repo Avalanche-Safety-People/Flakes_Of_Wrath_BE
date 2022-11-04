@@ -25,8 +25,8 @@ ActiveRecord::Schema.define(version: 2022_11_02_190701) do
   create_table "trips", force: :cascade do |t|
     t.bigint "user_id"
     t.string "name"
-    t.string "trip_zone"
-    t.string "dates"
+    t.integer "zone_id"
+    t.datetime "start_date"
     t.string "description"
     t.index ["user_id"], name: "index_trips_on_user_id"
   end

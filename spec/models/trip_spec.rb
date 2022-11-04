@@ -3,8 +3,8 @@ require 'rails_helper'
 RSpec.describe Trip, type: :model do
  describe 'validations' do
   it { should validate_presence_of :name }
-  it { should validate_presence_of :trip_zone }
-  it { should validate_presence_of :dates }
+  it { should validate_presence_of :zone_id }
+  it { should validate_presence_of :start_date }
   it { should validate_presence_of :description }
  end
 
@@ -15,7 +15,7 @@ RSpec.describe Trip, type: :model do
  describe 'attributes' do
   before :each do
    @user_1 = User.create!(uid: "107509505203685220862", provider: "google_oauth2", name: "Gavin", email: "gavin@guhmail.com")
-   @trip_1 = @user_1.trips.create!(name: 'Ski Trip', trip_zone: 'Noah Pass', dates: '12/20/2022 - 12/23/2022', description: 'Going skiing!')
+   @trip_1 = @user_1.trips.create!(name: 'Ski Trip', zone_id: 3, start_date: Date.new(2023, 03, 02), description: 'Going skiing!')
   end
 
   it 'instance of' do
@@ -24,8 +24,8 @@ RSpec.describe Trip, type: :model do
 
   it 'should have the expected attributes' do
    expect(@trip_1.name).to eq('Ski Trip')
-   expect(@trip_1.trip_zone).to eq('Noah Pass')
-   expect(@trip_1.dates).to eq('12/20/2022 - 12/23/2022')
+   expect(@trip_1.zone_id).to eq(3)
+   expect(@trip_1.start_date).to eq(Date.new(2023, 03, 02))
    expect(@trip_1.description).to eq('Going skiing!')
   end
  end
