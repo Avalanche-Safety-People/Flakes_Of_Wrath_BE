@@ -7,6 +7,7 @@ Rails.application.routes.draw do
       
       resources :users, only: %i[index show] do
         resources :trips, only: %i[create show index]
+        resources :emergency_contacts, only: %i[ create ]
       end
     end
   end
