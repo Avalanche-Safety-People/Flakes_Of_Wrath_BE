@@ -3,7 +3,10 @@ Rails.application.routes.draw do
   
   namespace :api do
     namespace :v1 do
+      get '/', to: 'landing#index'
+      
       resources :users, only: %i[index show] do
+        resources :trips, only: %i[create show index]
         resources :emergency_contacts, only: %i[ create ]
       end
     end

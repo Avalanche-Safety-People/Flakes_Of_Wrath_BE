@@ -1,9 +1,9 @@
 FactoryBot.define do
   factory :user do
+    uid { Faker::Fantasy::Tolkien.location }
+    provider { "google" }
     name { Faker::Fantasy::Tolkien.character }
-    uid   { Faker::Name.name }
-    provider { "googleoauth2" }
     email { Faker::Internet.email }
-    favorite_zone { Faker::Fantasy::Tolkien.location }
+    favorite_zone { Faker::Number.number(digits: 3) }
   end
 end
