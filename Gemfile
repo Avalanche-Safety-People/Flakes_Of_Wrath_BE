@@ -36,6 +36,8 @@ group :development, :test do
   gem 'pry'
   gem 'webmock'
   gem 'vcr'
+  gem 'factory_bot_rails'
+  gem 'faker'
   gem 'shoulda-matchers', '~> 5.0'
 end
 
