@@ -36,7 +36,7 @@ ActiveRecord::Schema.define(version: 2022_11_02_190701) do
     t.string "provider"
     t.string "name"
     t.string "email"
-    t.string "favorite_zone"
+    t.integer "favorite_zone"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
