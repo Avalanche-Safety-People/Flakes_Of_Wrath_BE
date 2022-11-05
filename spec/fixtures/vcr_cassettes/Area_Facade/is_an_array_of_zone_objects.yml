@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 04 Nov 2022 02:24:23 GMT
+      - Fri, 04 Nov 2022 02:24:22 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -39,7 +39,7 @@ http_interactions:
       Access-Control-Allow-Methods:
       - GET, POST, PUT, DELETE, OPTIONS
       X-Cache:
-      - HIT
+      - MISS
     body:
       encoding: ASCII-8BIT
       string: '{"id":111603,"published_time":"2022-09-07T14:55:00+00:00","expires_time":"2022-09-09T01:30:00+00:00","created_at":"2022-09-07T14:55:55+00:00","updated_at":"2022-09-07T14:57:19+00:00","author":"Dallas
@@ -95,5 +95,5 @@ http_interactions:
         Slopes Central","url":"http:\/\/www.nwac.us\/avalanche-forecast\/#\/east-slopes-central","state":"WA","zone_id":"8"},{"id":430,"name":"East
         Slopes South","url":"http:\/\/www.nwac.us\/avalanche-forecast\/#\/east-slopes-south","state":"WA","zone_id":"9"},{"id":431,"name":"Mt
         Hood","url":"http:\/\/www.nwac.us\/avalanche-forecast\/#\/mt-hood\n","state":"OR","zone_id":"10"}]}'
-  recorded_at: Fri, 04 Nov 2022 02:24:23 GMT
+  recorded_at: Fri, 04 Nov 2022 02:24:22 GMT
 recorded_with: VCR 6.1.0
