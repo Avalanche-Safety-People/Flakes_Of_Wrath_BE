@@ -7,7 +7,7 @@ class Api::V1::EmergencyContactsController < ApplicationController
   end
 
   def index
-
+    render json: EmergencyContactSerializer.new(EmergencyContact.all)
   end
 
   def update
