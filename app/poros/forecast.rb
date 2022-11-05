@@ -1,5 +1,5 @@
 class Forecast
-  # attr_reader
+  attr_reader :max_temp, :description, :avg_wind_speed, :max_wind_speed
 
   def initialize(attributes)
     @max_temp = attributes[:temp][:max]

@@ -23,9 +23,9 @@ class Area
     future_forecasts = forecasts[1..-1]
     future_forecasts.each do |forecast|
       current_risk = av_risk_forecast.last
-      if forecast.wind_speed > 50
+      if forecast.avg_wind_speed > 50
         current_risk += 2
-      elsif forecast.wind_speed > 25
+      elsif forecast.avg_wind_speed > 25
         current_risk += 1
       end
 

@@ -12,7 +12,6 @@ RSpec.describe 'Area Facade', :vcr do
    expect(area.state).to be_a String
    expect(area.url).to be_a String
    expect(area.zone_id).to be_a Integer
-   expect(area.)
   end
  end
 end
