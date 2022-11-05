@@ -5,12 +5,14 @@ class Forecast
     @max_temp = attributes[:temp][:max]
     @min_temp = attributes[:temp][:min]
     @description = attributes[:weather].first[:description]
+    @avg_wind_speed = attributes[:wind_speed]
+    @max_wind_speed = attributes[:wind_gust]
     @attributes = attributes ##optional stand in for any additional needed info
   end
 
   def snowfall
     if @attributes[:snow]
-      (@attributes[:snow]/25.4).round(2)
+      @attributes[:snow]
     else
       0
     end
@@ -18,7 +20,7 @@ class Forecast
 
   def rainfall
     if @attributes[:rain]
-      (@attributes[:rain]/25.4).round(2)
+      @attributes[:rain]
     else
       0
     end
