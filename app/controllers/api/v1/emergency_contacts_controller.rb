@@ -6,8 +6,23 @@ class Api::V1::EmergencyContactsController < ApplicationController
     end
   end
 
+  def index
 
+  end
 
+  def update
+    user = User.find(params[:user_id])
+    if user.emergency_contacts != []
+      emergency_contact = user.emergency_contacts.find_by(params[:name])
+      if emergency_contact.update(emergency_contact_params)
+        render json: EmergencyContactSerializer.new(emergency_contact)
+      else
+        render json: {error: 'contact unsuccessfully updated'}, status: 404
+      end
+    else
+      render json: EmergencyContactSerializer.no_contact
+    end
+  end
 
   private
 
