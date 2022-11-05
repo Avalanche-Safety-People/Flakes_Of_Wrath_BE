@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 03 Nov 2022 23:13:10 GMT
+      - Fri, 04 Nov 2022 02:24:22 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -95,5 +95,5 @@ http_interactions:
         Slopes Central","url":"http:\/\/www.nwac.us\/avalanche-forecast\/#\/east-slopes-central","state":"WA","zone_id":"8"},{"id":430,"name":"East
         Slopes South","url":"http:\/\/www.nwac.us\/avalanche-forecast\/#\/east-slopes-south","state":"WA","zone_id":"9"},{"id":431,"name":"Mt
         Hood","url":"http:\/\/www.nwac.us\/avalanche-forecast\/#\/mt-hood\n","state":"OR","zone_id":"10"}]}'
-  recorded_at: Thu, 03 Nov 2022 23:13:10 GMT
+  recorded_at: Fri, 04 Nov 2022 02:24:22 GMT
 recorded_with: VCR 6.1.0
