@@ -48,5 +48,20 @@ RSpec.describe "EmergencyContacts", type: :request do
 
       expect(response.body).to eq('{"data":{"id":null,"type":"emergency_contact"}}')
     end
+
+    it 'can update an existing emergency contact' do
+      emergency_contact = create(:emergency_contact, user_id: @user.id)
+
+      new_emergency_contact_params = { name: "" }
+      headers = {"CONTENT_TYPE" => "application/json"}
+      
+      patch "/api/v1/users/#{@user.id}/emergency_contacts", headers: headers, params: JSON.generate({emergency_contact: new_emergency_contact_params})
+
+      error_response = JSON.parse(response.body, symbolize_names: true)
+      expect(error_response).to have_key(:error)
+      expect(error_response).to_not have_key(:data)
+      expect(error_response[:error]).to eq('contact unsuccessfully updated')
+      expect(response).to have_http_status(404)
+    end
   end
 end
