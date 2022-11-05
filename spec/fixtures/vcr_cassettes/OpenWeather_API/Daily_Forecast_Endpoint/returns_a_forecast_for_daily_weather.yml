@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.openweathermap.org/data/3.0/onecall?appid=4629ddd2925e26386120921b9b369703&exclude=minutely,hourly&lat=47.427&lon=-121.418
+    uri: https://api.openweathermap.org/data/3.0/onecall?appid=4629ddd2925e26386120921b9b369703&exclude=minutely,hourly&lat=47.427&lon=-121.418&units=imperial
     body:
       encoding: US-ASCII
       string: ''
@@ -21,15 +21,15 @@ http_interactions:
       Server:
       - openresty
       Date:
-      - Fri, 04 Nov 2022 02:24:24 GMT
+      - Sat, 05 Nov 2022 19:10:56 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
-      - '5850'
+      - '7204'
       Connection:
       - keep-alive
       X-Cache-Key:
-      - "/data/3.0/onecall?exclude=minutely%2Chourly&lat=47.43&lon=-121.42"
+      - "/data/3.0/onecall?exclude=minutely%2Chourly&lat=47.43&lon=-121.42&units=imperial"
       Access-Control-Allow-Origin:
       - "*"
       Access-Control-Allow-Credentials:
@@ -38,26 +38,48 @@ http_interactions:
       - GET, POST
     body:
       encoding: UTF-8
-      string: '{"lat":47.427,"lon":-121.418,"timezone":"America/Los_Angeles","timezone_offset":-25200,"current":{"dt":1667528663,"sunrise":1667487146,"sunset":1667522757,"temp":272,"feels_like":272,"pressure":1015,"humidity":86,"dew_point":270.2,"uvi":0,"clouds":100,"visibility":805,"wind_speed":0,"wind_deg":0,"weather":[{"id":601,"main":"Snow","description":"snow","icon":"13n"},{"id":741,"main":"Fog","description":"fog","icon":"50n"}],"snow":{"1h":2.37}},"daily":[{"dt":1667502000,"sunrise":1667487146,"sunset":1667522757,"moonrise":1667517120,"moonset":1667466180,"moon_phase":0.34,"temp":{"day":273.91,"min":271.33,"max":274.05,"night":273.5,"eve":272.19,"morn":271.66},"feels_like":{"day":273.91,"night":273.5,"eve":272.19,"morn":271.66},"pressure":1024,"humidity":81,"dew_point":270.06,"wind_speed":1.46,"wind_deg":276,"wind_gust":2.3,"weather":[{"id":601,"main":"Snow","description":"snow","icon":"13d"}],"clouds":100,"pop":1,"snow":16.4,"uvi":0.69},{"dt":1667588400,"sunrise":1667573638,"sunset":1667609069,"moonrise":1667604600,"moonset":1667557260,"moon_phase":0.38,"temp":{"day":278.88,"min":273.98,"max":280.85,"night":278.71,"eve":280.84,"morn":275.72},"feels_like":{"day":276.67,"night":274.2,"eve":277.93,"morn":275.72},"pressure":1002,"humidity":100,"dew_point":278.03,"wind_speed":7.54,"wind_deg":260,"wind_gust":19.98,"weather":[{"id":502,"main":"Rain","description":"heavy
-        intensity rain","icon":"10d"}],"clouds":100,"pop":1,"rain":85.76,"uvi":0.04},{"dt":1667674800,"sunrise":1667660129,"sunset":1667695382,"moonrise":1667692020,"moonset":1667648160,"moon_phase":0.41,"temp":{"day":272.88,"min":270.92,"max":277.15,"night":271.13,"eve":272.22,"morn":272.59},"feels_like":{"day":267.85,"night":269.07,"eve":267.6,"morn":268.18},"pressure":1009,"humidity":95,"dew_point":271.32,"wind_speed":7.43,"wind_deg":262,"wind_gust":16.66,"weather":[{"id":616,"main":"Snow","description":"rain
-        and snow","icon":"13d"}],"clouds":88,"pop":1,"rain":2.6,"snow":34.33,"uvi":0.29},{"dt":1667761200,"sunrise":1667746620,"sunset":1667781697,"moonrise":1667779500,"moonset":1667735400,"moon_phase":0.45,"temp":{"day":271.94,"min":267.92,"max":273.64,"night":269.17,"eve":272.57,"morn":270.19},"feels_like":{"day":268.45,"night":266.53,"eve":272.57,"morn":267.09},"pressure":1000,"humidity":96,"dew_point":270.45,"wind_speed":2.74,"wind_deg":80,"wind_gust":4.06,"weather":[{"id":601,"main":"Snow","description":"snow","icon":"13d"}],"clouds":100,"pop":1,"snow":14.69,"uvi":0.67},{"dt":1667847600,"sunrise":1667833112,"sunset":1667868013,"moonrise":1667866980,"moonset":1667829840,"moon_phase":0.48,"temp":{"day":271.44,"min":260.86,"max":271.76,"night":260.86,"eve":269.26,"morn":270.08},"feels_like":{"day":268.64,"night":254.77,"eve":266.02,"morn":270.08},"pressure":1008,"humidity":89,"dew_point":268.98,"wind_speed":3.09,"wind_deg":95,"wind_gust":3.57,"weather":[{"id":601,"main":"Snow","description":"snow","icon":"13d"}],"clouds":99,"pop":1,"snow":10.3,"uvi":1.01},{"dt":1667934000,"sunrise":1667919603,"sunset":1667954332,"moonrise":1667954760,"moonset":1667920680,"moon_phase":0.5,"temp":{"day":267.43,"min":259.32,"max":269.88,"night":259.32,"eve":266.92,"morn":259.71},"feels_like":{"day":263.52,"night":253.42,"eve":263.1,"morn":253.57},"pressure":1020,"humidity":88,"dew_point":264.65,"wind_speed":3.09,"wind_deg":95,"wind_gust":3.37,"weather":[{"id":801,"main":"Clouds","description":"few
-        clouds","icon":"02d"}],"clouds":21,"pop":0,"uvi":2},{"dt":1668020400,"sunrise":1668006094,"sunset":1668040652,"moonrise":1668042780,"moonset":1668011400,"moon_phase":0.54,"temp":{"day":267.34,"min":257.59,"max":269.78,"night":260.57,"eve":268.31,"morn":257.96},"feels_like":{"day":267.34,"night":255.93,"eve":268.31,"morn":251.95},"pressure":1020,"humidity":87,"dew_point":264.4,"wind_speed":2.8,"wind_deg":100,"wind_gust":2.71,"weather":[{"id":600,"main":"Snow","description":"light
-        snow","icon":"13d"}],"clouds":32,"pop":0.2,"snow":0.12,"uvi":2},{"dt":1668106800,"sunrise":1668092585,"sunset":1668126974,"moonrise":1668131220,"moonset":1668102000,"moon_phase":0.58,"temp":{"day":268.67,"min":260.86,"max":270.29,"night":267.6,"eve":268.49,"morn":262.16},"feels_like":{"day":264.29,"night":263.07,"eve":264.15,"morn":256.97},"pressure":1025,"humidity":93,"dew_point":266.7,"wind_speed":3.05,"wind_deg":107,"wind_gust":4.25,"weather":[{"id":601,"main":"Snow","description":"snow","icon":"13d"}],"clouds":65,"pop":0.74,"snow":3.12,"uvi":2}],"alerts":[{"sender_name":"NWS
-        Seattle (Northwest Washington)","event":"Flood Watch","start":1667516460,"end":1667692800,"description":"...FLOOD
-        WATCH REMAINS IN EFFECT FROM 11 PM PDT THIS EVENING THROUGH\nSATURDAY AFTERNOON...\n*
-        WHAT...Flooding caused by excessive rainfall continues to be\npossible.\n*
-        WHERE...A portion of west central Washington, including the\nfollowing counties,
-        King and Snohomish.\n* WHEN...From 11 PM PDT this evening through Saturday
-        afternoon.\n* IMPACTS...Excessive runoff may result in flooding of rivers,\ncreeks,
-        streams, and other low-lying and flood-prone locations.\n* ADDITIONAL DETAILS...\n-
-        A potent weather system will bring heavy rainfall to the\nregion late tonight
-        through early Saturday. This rainfall\nwill result in rapid rises and potential
-        for flooding along\narea rivers.\n- http://www.weather.gov/safety/flood","tags":["Flood"]},{"sender_name":"NWS
-        Seattle (Northwest Washington)","event":"Winter Weather Advisory","start":1667520000,"end":1667548800,"description":"...WINTER
-        WEATHER ADVISORY IN EFFECT UNTIL 1 AM PDT FRIDAY ABOVE\n3500 FEET...\n* WHAT...Snow
-        expected above 3500 feet. Total snow accumulations\nof 4 to 8 inches.\n* WHERE...Cascade
-        mountains and valleys of Snohomish and King\nCounties, including Darrington,
-        Index, Skykomish, Stevens\nPass, and Snoqualmie Pass.\n* WHEN...Until 1 AM
-        PDT Friday.\n* IMPACTS...Plan on slippery road conditions.","tags":[]}]}'
-  recorded_at: Fri, 04 Nov 2022 02:24:24 GMT
+      string: '{"lat":47.427,"lon":-121.418,"timezone":"America/Los_Angeles","timezone_offset":-25200,"current":{"dt":1667675456,"sunrise":1667660129,"sunset":1667695382,"temp":33.53,"feels_like":24.06,"pressure":1010,"humidity":95,"dew_point":32.25,"uvi":0.21,"clouds":94,"visibility":719,"wind_speed":13.62,"wind_deg":272,"wind_gust":28.97,"weather":[{"id":601,"main":"Snow","description":"snow","icon":"13d"}],"snow":{"1h":0.65}},"daily":[{"dt":1667674800,"sunrise":1667660129,"sunset":1667695382,"moonrise":1667692020,"moonset":1667648160,"moon_phase":0.41,"temp":{"day":33.53,"min":24.84,"max":41.54,"night":24.84,"eve":30.22,"morn":32.13},"feels_like":{"day":24.06,"night":24.84,"eve":22.32,"morn":23.94},"pressure":1010,"humidity":95,"dew_point":32.25,"wind_speed":17.31,"wind_deg":272,"wind_gust":49.91,"weather":[{"id":616,"main":"Snow","description":"rain
+        and snow","icon":"13d"}],"clouds":94,"pop":0.98,"rain":2.48,"snow":24.18,"uvi":0.23},{"dt":1667761200,"sunrise":1667746620,"sunset":1667781697,"moonrise":1667779500,"moonset":1667735400,"moon_phase":0.45,"temp":{"day":31.48,"min":20.79,"max":32.27,"night":27.72,"eve":27.66,"morn":25.75},"feels_like":{"day":26.29,"night":27.72,"eve":21.61,"morn":18.37},"pressure":1003,"humidity":93,"dew_point":28.29,"wind_speed":6.55,"wind_deg":111,"wind_gust":10.8,"weather":[{"id":601,"main":"Snow","description":"snow","icon":"13d"}],"clouds":100,"pop":1,"snow":19.09,"uvi":0.61},{"dt":1667847600,"sunrise":1667833112,"sunset":1667868013,"moonrise":1667866980,"moonset":1667829840,"moon_phase":0.48,"temp":{"day":32.05,"min":20.23,"max":32.36,"night":21.47,"eve":25.63,"morn":24.24},"feels_like":{"day":28.8,"night":14.04,"eve":18.79,"morn":24.24},"pressure":1004,"humidity":89,"dew_point":27.77,"wind_speed":5.99,"wind_deg":96,"wind_gust":11.54,"weather":[{"id":601,"main":"Snow","description":"snow","icon":"13d"}],"clouds":100,"pop":1,"snow":4.77,"uvi":0.74},{"dt":1667934000,"sunrise":1667919603,"sunset":1667954332,"moonrise":1667954760,"moonset":1667920680,"moon_phase":0.5,"temp":{"day":25.65,"min":12.45,"max":30.52,"night":12.45,"eve":26.29,"morn":13.64},"feels_like":{"day":18.48,"night":2.77,"eve":21.24,"morn":4.05},"pressure":1019,"humidity":90,"dew_point":21.34,"wind_speed":6.58,"wind_deg":98,"wind_gust":8.7,"weather":[{"id":802,"main":"Clouds","description":"scattered
+        clouds","icon":"03d"}],"clouds":37,"pop":0.16,"uvi":1.14},{"dt":1668020400,"sunrise":1668006094,"sunset":1668040652,"moonrise":1668042780,"moonset":1668011400,"moon_phase":0.54,"temp":{"day":28.83,"min":11.55,"max":32.63,"night":16.27,"eve":27.55,"morn":12.06},"feels_like":{"day":28.83,"night":16.27,"eve":27.55,"morn":2.8},"pressure":1020,"humidity":87,"dew_point":23.85,"wind_speed":5.7,"wind_deg":97,"wind_gust":4.27,"weather":[{"id":801,"main":"Clouds","description":"few
+        clouds","icon":"02d"}],"clouds":18,"pop":0,"uvi":1.35},{"dt":1668106800,"sunrise":1668092585,"sunset":1668126974,"moonrise":1668131220,"moonset":1668102000,"moon_phase":0.58,"temp":{"day":26.89,"min":13.1,"max":30.88,"night":15.62,"eve":25.45,"morn":13.86},"feels_like":{"day":22.53,"night":4.5,"eve":18.77,"morn":6.78},"pressure":1029,"humidity":88,"dew_point":22.15,"wind_speed":8.5,"wind_deg":105,"wind_gust":10.49,"weather":[{"id":803,"main":"Clouds","description":"broken
+        clouds","icon":"04d"}],"clouds":53,"pop":0,"uvi":2},{"dt":1668193200,"sunrise":1668179076,"sunset":1668213298,"moonrise":1668220140,"moonset":1668192180,"moon_phase":0.61,"temp":{"day":27.3,"min":15.82,"max":31.19,"night":24.62,"eve":27.46,"morn":16.74},"feels_like":{"day":18.3,"night":17.53,"eve":19.58,"morn":5.41},"pressure":1021,"humidity":91,"dew_point":23.25,"wind_speed":9.33,"wind_deg":105,"wind_gust":12.75,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04d"}],"clouds":100,"pop":0,"uvi":2},{"dt":1668279600,"sunrise":1668265566,"sunset":1668299624,"moonrise":1668309720,"moonset":1668281880,"moon_phase":0.64,"temp":{"day":30.04,"min":19.87,"max":33.84,"night":19.87,"eve":30.18,"morn":23.63},"feels_like":{"day":24.48,"night":11.46,"eve":24.91,"morn":17.11},"pressure":1023,"humidity":87,"dew_point":25.11,"wind_speed":6.33,"wind_deg":99,"wind_gust":7.2,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04d"}],"clouds":100,"pop":0,"uvi":2}],"alerts":[{"sender_name":"NWS
+        Seattle (Northwest Washington)","event":"Flood Watch","start":1667627880,"end":1667738280,"description":".Heavy
+        rain has come to an end over the area early Saturday morning.\n...FLOOD WATCH
+        REMAINS IN EFFECT THROUGH THIS AFTERNOON...\n* WHAT...Flooding caused by excessive
+        rainfall continues to be\npossible.\n* WHERE...Portions of northwest Washington
+        and west central\nWashington, including the following counties, in northwest\nWashington,
+        Clallam, Grays Harbor, Jefferson, Skagit and Whatcom.\nIn west central Washington,
+        King, Lewis, Pierce, Snohomish and\nThurston.\n* WHEN...Through this afternoon.\n*
+        IMPACTS...Excessive runoff may result in flooding of rivers,\ncreeks, streams,
+        and other low-lying and flood-prone locations.\nFlooding may occur in poor
+        drainage and urban areas. Storm drains\nand ditches may become clogged with
+        debris. Area creeks and\nstreams are running high and could flood with more
+        heavy rain.\n* ADDITIONAL DETAILS...\n- Heavy rain has come to an end over
+        the area early Saturday\nmorning. The upper reaches of the rivers have crested
+        or will\ncrest this morning. The lower reaches will crest this\nafternoon.\n-
+        http://www.weather.gov/safety/flood","tags":["Flood"]},{"sender_name":"NWS
+        Pendleton (Northeast Oregon and Southeast Washington)","event":"Winter Weather
+        Advisory","start":1667664000,"end":1667779200,"description":"...WINTER WEATHER
+        ADVISORY NOW IN EFFECT FROM 9 AM PDT THIS\nMORNING TO 4 PM PST SUNDAY ABOVE
+        2500 FEET...\n* WHAT...Snow expected above 2500 feet. Total snow accumulations\nof
+        5 to 12 inches. Winds gusting as high as 40 mph, especially\nearly.\n* WHERE...East
+        Slopes of the Washington Cascades.\n* WHEN...From 9 AM PDT this morning to
+        4 PM PST Sunday.\n* IMPACTS...Travel could be very difficult, especially along
+        I-90\nand through Snoqualmie Pass. Patchy blowing snow could\nsignificantly
+        reduce visibility.","tags":[]},{"sender_name":"NWS Pendleton (Northeast Oregon
+        and Southeast Washington)","event":"Hydrologic Outlook","start":1667714400,"end":1667692800,"description":"...HEAVY
+        RAINFALL THROUGH THIS AFTERNOON WILL CAUSE RISING WATERS\nALONG\nTHE YAKIMA
+        RIVER...\nAn Atmospheric River will produce moderate to heavy precipitation\nacross
+        the east slopes of the Washington Cascades through\nthis afternoon.\nTotal
+        liquid precipitation amounts through 5 PM PDT today\nranging from 0.15 to
+        0.25 inches are expected along the foothills.\nTotal amounts ranging from
+        0.25 to 0.75 inches are expected in the\nmountains with locally heavy amounts
+        nearing 1.00 inches.\nThis will lead to rises on rivers, with the Yakima at
+        Easton\nexpected to crest at around action stage between 50.0-50.5 feet this\nevening.
+        This will cause areas of minor flooding to be possible\nalong the already
+        saturated region.\nPlease monitor the latest river forecasts from the National
+        Weather\nService for additional information.","tags":[]}]}'
+  recorded_at: Sat, 05 Nov 2022 19:10:56 GMT
 recorded_with: VCR 6.1.0

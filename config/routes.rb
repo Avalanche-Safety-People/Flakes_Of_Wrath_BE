@@ -4,6 +4,10 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       get '/', to: 'landing#index'
+
+      resources :areas, only: %i[show] do
+        resources :forecast, only: %i[index]
+      end
       
       resources :users, only: %i[index show] do
         resources :trips, only: %i[create show index]
