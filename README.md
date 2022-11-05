@@ -30,13 +30,13 @@
   <p align="center">
     <h2> A way to predict further out in time the potential danger of avalanches so you can plan your backcountry trips earlier than ONE day before! </h2>
     <br />
-    <a href="https://github.com/Avalanche-Safety-People/flakes_of_wrath_fe"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/Avalanche-Safety-People/flakes_of_wrath_be"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     ·
-    <a href="https://github.com/Avalanche-Safety-People/flakes_of_wrath_fe/issues">Report Bug</a>
+    <a href="https://github.com/Avalanche-Safety-People/flakes_of_wrath_be/issues">Report Bug</a>
     ·
-    <a href="https://github.com/Avalanche-Safety-People/flakes_of_wrath_fe/issues">Request Feature</a>
+    <a href="https://github.com/Avalanche-Safety-People/flakes_of_wrath_be/issues">Request Feature</a>
   </p>
 </div>
 <br>
@@ -67,7 +67,7 @@
 <center>
 <!-- TABLE OF CONTENTS -->
 
-### About The Project
+# About The Project
 <details>
   <h1><summary>Table of Contents</summary></h1>
   <ol>
@@ -80,11 +80,9 @@
         <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#installation">Installation</a></li>
     </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#apis">APIs</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="#contacts">Contacts</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
@@ -101,7 +99,7 @@ Database tables are stored on the back end of the app, but to make sure you can 
 </center>
 <!-- GETTING STARTED -->
 
-### Prerequisites
+## Prerequisites
 
 This project requires Ruby 2.7.4
 - must use Rails 5.2.x
@@ -109,51 +107,47 @@ This project requires Ruby 2.7.4
 
 <br>
 
-### Setup/Install
+## Setup/Install
 * Fork this repository
 * Clone your fork
 * From the command line, install gems and set up your DB:
     * `bundle`
-    * `rails db:create`
+* APIs used
+  * https://api.avalanche.org/v2/public/products/map-layer/NWAC
+    * no key needed
+  * https://api.openweathermap.org/data/3.0/onecall
+    * get your API key at http://openweathermap.org/
+  * `bundle exec figaro install`
+    * go to `config/application.yml`
+    * name your API key from open weather `OPENWEATHERTOKEN`
+<img src="app/assets/images/api_key.png" width="350" height="200">
+* Run `rails db:{create,migrate}`
 * Run the test suite with `bundle exec rspec`.
 * Run your development server with `rails s` to see the app in action.
-* Get a free API Key at [https://example.com](https://example.com)
-* Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
+* The app that you will want to SEE the functionality is [Flakes of Wrath FE](https://github.com/Avalanche-Safety-People/flakes_of_wrath_fe). KEEP this server running as the front end will make calls to this BE app
 
-<!-- USAGE EXAMPLES -->
-## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
-<!-- ROADMAP -->
-## Roadmap
-
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-    - [ ] Nested Feature
-
-See the [open issues](https://github.com/Avalanche-Safety-People/flakes_of_wrath_fe/issues) for a full list of proposed features (and known issues).
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- API -->
+<!-- APIs -->
 ## APIs
-
+* GET all users
+  * **/api/v1/users**
+* GET Specific trip for user
+  * **/api/v1/users/:user_id/trips/:id**
+* GET all trips for one user
+  * **'/api/v1/users/:user_id/trips'**
+* POST new trip for user
+  * **/api/v1/users/:user_id/trips**
+* POST new emergency contact for user
+  * **/api/v1/users/:user_id/emergency_contacts**
+* PATCH an existing emergency contact for user
+  * **/api/v1/users/:user_id/emergency_contacts/:id**
 
 <!-- CONTACT -->
-## Contact
+## Contacts
 
-Project Link: [Flakes of Wrath FE](https://github.com/Avalanche-Safety-People/flakes_of_wrath_fe)
+Project Link: [Flakes of Wrath BE](https://github.com/Avalanche-Safety-People/flakes_of_wrath_be)
 
 Individual contributors :
 * [Gavin Carew](https://github.com/gjcarew)
@@ -163,18 +157,6 @@ Individual contributors :
 * [Ryan Smith](https://github.com/RyanChrisSmith)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
-
-* []()
-* []()
-* []()
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 
 
