@@ -1,9 +1,7 @@
 class Api::V1::EmergencyContactsController < ApplicationController
   def create
     emergency_contact = EmergencyContact.new(emergency_contact_params)
-    if emergency_contact.save
-      render json: EmergencyContactSerializer.new(emergency_contact), status: :created
-    end
+    render json: EmergencyContactSerializer.new(emergency_contact), status: :created if emergency_contact.save
   end
 
   def index
@@ -17,7 +15,7 @@ class Api::V1::EmergencyContactsController < ApplicationController
       if emergency_contact.update(emergency_contact_params)
         render json: EmergencyContactSerializer.new(emergency_contact)
       else
-        render json: {error: 'contact unsuccessfully updated'}, status: 404
+        render json: { error: 'contact unsuccessfully updated' }, status: 404
       end
     else
       render json: EmergencyContactSerializer.no_contact

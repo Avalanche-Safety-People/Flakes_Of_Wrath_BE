@@ -4,11 +4,15 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       get '/', to: 'landing#index'
-      
+
+      resources :areas, only: %i[index show] do
+        resources :forecast, only: %i[index]
+      end
+
       resources :users, only: %i[index show] do
         resources :trips, only: %i[create show index]
-        resources :emergency_contacts, only: %i[index create update]
-         patch '/emergency_contacts', to: 'emergency_contacts#update'
+        resources :emergency_contacts, only: %i[create update]
+        patch '/emergency_contacts', to: 'emergency_contacts#update'
       end
     end
   end

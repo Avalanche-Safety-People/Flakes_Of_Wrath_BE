@@ -4,10 +4,10 @@ class EmergencyContactSerializer
 
   def self.no_contact
     {
-        "data": {
-          "id": nil,
-          "type": "emergency_contact"
-        }
+      "data": {
+        "id": nil,
+        "type": 'emergency_contact'
       }
+    }
   end
 end

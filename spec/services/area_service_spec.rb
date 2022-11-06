@@ -6,7 +6,7 @@ RSpec.describe 'Area Service', :vcr do
 
     expect(areas).to be_an Array
 
-    areas.each do|area|
+    areas.each do |area|
       expect(area).to have_key(:id)
       expect(area[:id]).to be_an Integer
       expect(area).to have_key(:name)

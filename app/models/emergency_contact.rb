@@ -1,5 +1,5 @@
 class EmergencyContact < ApplicationRecord
- validates_presence_of :name, :phone_number
+  validates_presence_of :name, :phone_number
 
- belongs_to :user
+  belongs_to :user
 end
