@@ -5,7 +5,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       get '/', to: 'landing#index'
       
-      resources :users, only: %i[index show] do
+      resources :users, only: %i[index show update] do
         resources :trips, only: %i[create show index]
         resources :emergency_contacts, only: %i[index create update]
          patch '/emergency_contacts', to: 'emergency_contacts#update'
