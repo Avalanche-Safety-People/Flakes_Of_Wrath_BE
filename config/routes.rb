@@ -10,6 +10,11 @@ Rails.application.routes.draw do
         resources :emergency_contacts, only: %i[index create update destroy]
          patch '/emergency_contacts', to: 'emergency_contacts#update'
       end
+
+
+      resources :areas, only: %i[index show] do
+        resources :forecasts, only: %i[index]
+      end
     end
   end
 end

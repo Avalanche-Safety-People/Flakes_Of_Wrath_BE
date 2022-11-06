@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 06 Nov 2022 19:38:59 GMT
+      - Sun, 06 Nov 2022 20:12:35 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -39,7 +39,7 @@ http_interactions:
       Access-Control-Allow-Methods:
       - GET, POST, PUT, DELETE, OPTIONS
       X-Cache:
-      - HIT
+      - EXPIRED
     body:
       encoding: ASCII-8BIT
       string: '{"type":"FeatureCollection","features":[{"type":"Feature","id":419,"properties":{"name":"Olympics","center":"Northwest
@@ -83,5 +83,62 @@ http_interactions:
         for signs of unstable snow such as recent avalanches, cracking in the snow,
         and audible collapsing. Avoid traveling on or under similar slopes.","danger":"no
         rating","danger_level":-1,"color":"#888888","stroke":"#104efb","font_color":"#ffffff","link":"http:\/\/www.nwac.us\/avalanche-forecast\/#\/east-slopes-south","start_date":"2022-11-04T22:00:00","end_date":"2022-11-17T02:30:00","fillOpacity":0.5,"fillIncrement":0.1,"warning":{"product":null}},"geometry":{"type":"Polygon","coordinates":[[[-121.2752,47.1902],[-120.9853,47.079],[-120.7385,46.9962],[-120.7286,46.7882],[-120.7285,46.7724],[-120.7361,46.7588],[-120.7936,46.741],[-120.8262,46.7186],[-120.8545,46.6792],[-120.8484,46.5267],[-120.9109,46.4125],[-120.9833,46.1317],[-121.1595,46.0161],[-121.5113,45.8909],[-121.4199,46.1756],[-121.4012,46.2637],[-121.3836,46.2947],[-121.3318,46.3882],[-121.3398,46.5612],[-121.2895,46.6344],[-121.3471,46.7218],[-121.4041,46.7863],[-121.4584,46.8417],[-121.456,46.8917],[-121.4368,46.9169],[-121.4054,46.9414],[-121.2975,47.1426],[-121.2752,47.1902]]]}}],"start_time":null,"end_time":null}'
-  recorded_at: Sun, 06 Nov 2022 19:38:59 GMT
+  recorded_at: Sun, 06 Nov 2022 20:12:35 GMT
+- request:
+    method: get
+    uri: https://api.openweathermap.org/data/3.0/onecall?appid=4629ddd2925e26386120921b9b369703&exclude=minutely,hourly&lat=47.98&lon=-123.49&units=imperial
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.6.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - openresty
+      Date:
+      - Sun, 06 Nov 2022 20:12:35 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '5170'
+      Connection:
+      - keep-alive
+      X-Cache-Key:
+      - "/data/3.0/onecall?exclude=minutely%2Chourly&lat=47.98&lon=-123.49&units=imperial"
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST
+    body:
+      encoding: UTF-8
+      string: '{"lat":47.98,"lon":-123.49,"timezone":"America/Los_Angeles","timezone_offset":-28800,"current":{"dt":1667765530,"sunrise":1667747203,"sunset":1667782109,"temp":26.02,"feels_like":21.9,"pressure":998,"humidity":78,"dew_point":20.79,"uvi":0.84,"clouds":75,"visibility":10000,"wind_speed":3.44,"wind_deg":340,"weather":[{"id":300,"main":"Drizzle","description":"light
+        intensity drizzle","icon":"09d"},{"id":501,"main":"Rain","description":"moderate
+        rain","icon":"10d"}],"rain":{"1h":1.02}},"daily":[{"dt":1667761200,"sunrise":1667747203,"sunset":1667782109,"moonrise":1667779920,"moonset":1667736000,"moon_phase":0.45,"temp":{"day":26.17,"min":20.95,"max":26.56,"night":21.09,"eve":23.49,"morn":24.82},"feels_like":{"day":26.17,"night":15.48,"eve":23.49,"morn":18.25},"pressure":998,"humidity":81,"dew_point":21.72,"wind_speed":6.82,"wind_deg":169,"wind_gust":12.71,"weather":[{"id":601,"main":"Snow","description":"snow","icon":"13d"}],"clouds":80,"pop":1,"snow":28.13,"uvi":0.84},{"dt":1667847600,"sunrise":1667833696,"sunset":1667868424,"moonrise":1667867460,"moonset":1667830440,"moon_phase":0.48,"temp":{"day":18.09,"min":10.78,"max":20.32,"night":10.78,"eve":15.69,"morn":16.95},"feels_like":{"day":9.86,"night":3.63,"eve":8.98,"morn":10.76},"pressure":1008,"humidity":95,"dew_point":21.02,"wind_speed":6.33,"wind_deg":45,"wind_gust":8.97,"weather":[{"id":601,"main":"Snow","description":"snow","icon":"13d"}],"clouds":100,"pop":0.84,"snow":13.85,"uvi":0.66},{"dt":1667934000,"sunrise":1667920189,"sunset":1667954740,"moonrise":1667955120,"moonset":1667921280,"moon_phase":0.5,"temp":{"day":14.9,"min":4.46,"max":17.2,"night":10.85,"eve":9.14,"morn":4.46},"feels_like":{"day":6.69,"night":2.43,"eve":1.35,"morn":-2.65},"pressure":1020,"humidity":92,"dew_point":16.77,"wind_speed":5.26,"wind_deg":58,"wind_gust":7.4,"weather":[{"id":601,"main":"Snow","description":"snow","icon":"13d"}],"clouds":91,"pop":0.64,"snow":0.82,"uvi":0.99},{"dt":1668020400,"sunrise":1668006682,"sunset":1668041059,"moonrise":1668043140,"moonset":1668012060,"moon_phase":0.54,"temp":{"day":24.89,"min":10.51,"max":26.17,"night":14.23,"eve":23.2,"morn":11.77},"feels_like":{"day":24.89,"night":5.52,"eve":23.2,"morn":2.39},"pressure":1017,"humidity":85,"dew_point":25.48,"wind_speed":6.06,"wind_deg":175,"wind_gust":4.45,"weather":[{"id":801,"main":"Clouds","description":"few
+        clouds","icon":"02d"}],"clouds":11,"pop":0,"uvi":1.22},{"dt":1668106800,"sunrise":1668093175,"sunset":1668127379,"moonrise":1668131580,"moonset":1668102660,"moon_phase":0.58,"temp":{"day":25.54,"min":17.24,"max":26.69,"night":22.5,"eve":25.59,"morn":18},"feels_like":{"day":25.54,"night":22.5,"eve":25.59,"morn":11.12},"pressure":1026,"humidity":96,"dew_point":29.01,"wind_speed":4.74,"wind_deg":190,"wind_gust":3.62,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04d"}],"clouds":91,"pop":0,"uvi":1.14},{"dt":1668193200,"sunrise":1668179668,"sunset":1668213701,"moonrise":1668220500,"moonset":1668192900,"moon_phase":0.61,"temp":{"day":26.74,"min":18.21,"max":27.46,"night":23.07,"eve":26.85,"morn":18.21},"feels_like":{"day":22.57,"night":16.5,"eve":23.23,"morn":12.2},"pressure":1021,"humidity":98,"dew_point":30.78,"wind_speed":5.08,"wind_deg":156,"wind_gust":5.19,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04d"}],"clouds":86,"pop":0,"uvi":2},{"dt":1668279600,"sunrise":1668266160,"sunset":1668300025,"moonrise":1668310020,"moonset":1668282600,"moon_phase":0.64,"temp":{"day":29.71,"min":20.66,"max":30.43,"night":20.98,"eve":27.41,"morn":20.7},"feels_like":{"day":29.71,"night":12.9,"eve":27.41,"morn":13.1},"pressure":1020,"humidity":99,"dew_point":33.82,"wind_speed":6.22,"wind_deg":173,"wind_gust":4.61,"weather":[{"id":802,"main":"Clouds","description":"scattered
+        clouds","icon":"03d"}],"clouds":41,"pop":0,"uvi":2},{"dt":1668366000,"sunrise":1668352652,"sunset":1668386351,"moonrise":1668400020,"moonset":1668371640,"moon_phase":0.67,"temp":{"day":31.08,"min":22.3,"max":32.23,"night":29.95,"eve":29.68,"morn":22.82},"feels_like":{"day":31.08,"night":26.33,"eve":25.95,"morn":15.51},"pressure":1023,"humidity":97,"dew_point":34.68,"wind_speed":6.11,"wind_deg":169,"wind_gust":7.05,"weather":[{"id":600,"main":"Snow","description":"light
+        snow","icon":"13d"}],"clouds":39,"pop":0.48,"snow":0.6,"uvi":2}],"alerts":[{"sender_name":"NWS
+        Seattle (Northwest Washington)","event":"Winter Weather Advisory","start":1667755200,"end":1667779200,"description":"...WINTER
+        WEATHER ADVISORY REMAINS IN EFFECT UNTIL 4 PM PST THIS\nAFTERNOON ABOVE 2000
+        FEET...\n* WHAT...Snow above 2000 feet. Additional snow accumulations of 3\nto
+        6 inches.\n* WHERE...Olympic mountains and valleys, including Hurricane\nRidge,
+        Cascade mountains and valleys of Whatcom and Skagit\nCounties, including the
+        Mount Baker Ski Area, Cascade mountains\nand valleys of Snohomish and King
+        Counties, including Stevens\nPass, and Snoqualmie Pass and Cascade mountains
+        and valleys of\nPierce and Lewis Counties, including the Crystal Mountain
+        Ski\nArea, and Paradise on Mount Rainier.\n* WHEN...Until 4 PM PST this afternoon.\n*
+        IMPACTS...Plan on slippery road conditions.","tags":[]}]}'
+  recorded_at: Sun, 06 Nov 2022 20:12:35 GMT
 recorded_with: VCR 6.1.0
