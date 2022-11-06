@@ -13,7 +13,7 @@ Rails.application.routes.draw do
 
 
       resources :areas, only: %i[index show] do
-        resources :forecast, only: %i[index]
+        resources :forecasts, only: %i[index]
       end
     end
   end
