@@ -24,6 +24,11 @@ class Api::V1::EmergencyContactsController < ApplicationController
     end
   end
 
+  def destroy
+    emergency_contact = EmergencyContact.find(params[:id])
+    emergency_contact.destroy
+  end
+
   private
 
   def emergency_contact_params

@@ -86,5 +86,19 @@ RSpec.describe "EmergencyContacts", type: :request do
         end
       end
     end
+
+    describe "As a developer, I can send a destroy request to the user emergency contacts endpoint" do
+      it "and get back a 204 success response to indicate that the entry has been successfully destroyed." do
+        emergency_contact = create(:emergency_contact, user_id: @user.id)
+
+        delete api_v1_user_emergency_contact_path(emergency_contact.user_id, emergency_contact.id)
+
+        expect(response).to be_successful
+        expect(EmergencyContact.count).to eq(0)
+        expect(response.status).to eq(204)
+        expect(response.body).to eq("")
+        expect{EmergencyContact.find(emergency_contact.id)}.to raise_error(ActiveRecord::RecordNotFound)
+      end
+    end
   end
 end
