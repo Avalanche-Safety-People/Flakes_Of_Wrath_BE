@@ -45,6 +45,19 @@ RSpec.describe 'User trips' do
       expect(response).to be_successful
     end
 
+    describe "As a developer, I can send a destroy request to the user trips endpoint" do
+      it "and get back a 204 success response to indicate that the entry has been successfully destroyed." do
+        user = create(:user)
+        trip_data = create(:trip, user_id: user.id)
 
+        delete api_v1_user_trip_path(trip_data.user_id, trip_data.id)
+
+        expect(response).to be_successful
+        expect(Trip.count).to eq(0)
+        expect(response.status).to eq(204)
+        expect(response.body).to eq("")
+        expect{Trip.find(trip_data.id)}.to raise_error(ActiveRecord::RecordNotFound)
+      end
+    end
   end
 end

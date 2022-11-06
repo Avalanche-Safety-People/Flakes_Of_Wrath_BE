@@ -19,6 +19,11 @@ class Api::V1::TripsController < ApplicationController
       render status: 404
     end
   end
+
+  def destroy
+    trip = Trip.find(params[:id])
+    trip.destroy
+  end
   
 private
   def trip_params
