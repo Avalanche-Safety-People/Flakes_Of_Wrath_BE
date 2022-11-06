@@ -19,8 +19,9 @@ class Api::V1::TripsController < ApplicationController
       render status: 404
     end
   end
-  
-private
+
+  private
+
   def trip_params
     params.permit(:name, :zone_id, :start_date, :description, :user_id)
   end

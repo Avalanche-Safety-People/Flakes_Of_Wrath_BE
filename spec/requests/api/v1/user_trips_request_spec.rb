@@ -1,8 +1,8 @@
 require 'rails_helper'
 
-RSpec.describe 'User trips' do 
-  describe 'As a developer, when visit the user trips show path' do 
-    it 'I send a single trip' do 
+RSpec.describe 'User trips' do
+  describe 'As a developer, when visit the user trips show path' do
+    it 'I send a single trip' do
       user = create(:user)
       trip_data = create(:trip, user_id: user.id)
 
@@ -18,7 +18,7 @@ RSpec.describe 'User trips' do
       expect(trip[:data][:attributes]).to have_key :user_id
     end
 
-    it 'I can send all trips belonging to a user' do 
+    it 'I can send all trips belonging to a user' do
       user = create(:user)
       trips_data = create_list(:trip, 5, user_id: user.id)
 
@@ -29,7 +29,7 @@ RSpec.describe 'User trips' do
       expect(trips[:data]).to be_an Array
     end
 
-    it 'I can create a trip for a user' do 
+    it 'I can create a trip for a user' do
       user = create(:user)
       new_trip_params = {
         name: 'asdasd',
@@ -38,7 +38,7 @@ RSpec.describe 'User trips' do
         description: 'very snowy',
         user_id: user.id
       }
-      new_trip_params = (attributes_for(:trip, user_id: user.id))
+      new_trip_params = attributes_for(:trip, user_id: user.id)
 
       post api_v1_user_trips_path(user.id), params: new_trip_params
 

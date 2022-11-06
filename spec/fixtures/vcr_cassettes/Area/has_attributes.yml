@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 05 Nov 2022 19:10:54 GMT
+      - Sun, 06 Nov 2022 17:24:45 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -39,7 +39,7 @@ http_interactions:
       Access-Control-Allow-Methods:
       - GET, POST, PUT, DELETE, OPTIONS
       X-Cache:
-      - EXPIRED
+      - HIT
     body:
       encoding: ASCII-8BIT
       string: '{"type":"FeatureCollection","features":[{"type":"Feature","id":419,"properties":{"name":"Olympics","center":"Northwest
@@ -83,5 +83,5 @@ http_interactions:
         for signs of unstable snow such as recent avalanches, cracking in the snow,
         and audible collapsing. Avoid traveling on or under similar slopes.","danger":"no
         rating","danger_level":-1,"color":"#888888","stroke":"#104efb","font_color":"#ffffff","link":"http:\/\/www.nwac.us\/avalanche-forecast\/#\/east-slopes-south","start_date":"2022-11-04T22:00:00","end_date":"2022-11-17T02:30:00","fillOpacity":0.5,"fillIncrement":0.1,"warning":{"product":null}},"geometry":{"type":"Polygon","coordinates":[[[-121.2752,47.1902],[-120.9853,47.079],[-120.7385,46.9962],[-120.7286,46.7882],[-120.7285,46.7724],[-120.7361,46.7588],[-120.7936,46.741],[-120.8262,46.7186],[-120.8545,46.6792],[-120.8484,46.5267],[-120.9109,46.4125],[-120.9833,46.1317],[-121.1595,46.0161],[-121.5113,45.8909],[-121.4199,46.1756],[-121.4012,46.2637],[-121.3836,46.2947],[-121.3318,46.3882],[-121.3398,46.5612],[-121.2895,46.6344],[-121.3471,46.7218],[-121.4041,46.7863],[-121.4584,46.8417],[-121.456,46.8917],[-121.4368,46.9169],[-121.4054,46.9414],[-121.2975,47.1426],[-121.2752,47.1902]]]}}],"start_time":null,"end_time":null}'
-  recorded_at: Sat, 05 Nov 2022 19:10:53 GMT
+  recorded_at: Sun, 06 Nov 2022 17:24:45 GMT
 recorded_with: VCR 6.1.0

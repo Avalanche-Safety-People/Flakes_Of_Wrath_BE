@@ -10,37 +10,36 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_11_02_190701) do
-
+ActiveRecord::Schema.define(version: 20_221_102_190_701) do
   # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
+  enable_extension 'plpgsql'
 
-  create_table "emergency_contacts", force: :cascade do |t|
-    t.bigint "user_id"
-    t.string "name"
-    t.string "phone_number"
-    t.index ["user_id"], name: "index_emergency_contacts_on_user_id"
+  create_table 'emergency_contacts', force: :cascade do |t|
+    t.bigint 'user_id'
+    t.string 'name'
+    t.string 'phone_number'
+    t.index ['user_id'], name: 'index_emergency_contacts_on_user_id'
   end
 
-  create_table "trips", force: :cascade do |t|
-    t.bigint "user_id"
-    t.string "name"
-    t.integer "zone_id"
-    t.datetime "start_date"
-    t.string "description"
-    t.index ["user_id"], name: "index_trips_on_user_id"
+  create_table 'trips', force: :cascade do |t|
+    t.bigint 'user_id'
+    t.string 'name'
+    t.integer 'zone_id'
+    t.datetime 'start_date'
+    t.string 'description'
+    t.index ['user_id'], name: 'index_trips_on_user_id'
   end
 
-  create_table "users", force: :cascade do |t|
-    t.string "uid"
-    t.string "provider"
-    t.string "name"
-    t.string "email"
-    t.integer "favorite_zone"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+  create_table 'users', force: :cascade do |t|
+    t.string 'uid'
+    t.string 'provider'
+    t.string 'name'
+    t.string 'email'
+    t.integer 'favorite_zone'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
   end
 
-  add_foreign_key "emergency_contacts", "users"
-  add_foreign_key "trips", "users"
+  add_foreign_key 'emergency_contacts', 'users'
+  add_foreign_key 'trips', 'users'
 end

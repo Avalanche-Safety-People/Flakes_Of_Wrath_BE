@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 05 Nov 2022 19:10:54 GMT
+      - Sun, 06 Nov 2022 17:24:46 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -39,7 +39,7 @@ http_interactions:
       Access-Control-Allow-Methods:
       - GET, POST, PUT, DELETE, OPTIONS
       X-Cache:
-      - HIT
+      - EXPIRED
     body:
       encoding: ASCII-8BIT
       string: '{"type":"FeatureCollection","features":[{"type":"Feature","id":419,"properties":{"name":"Olympics","center":"Northwest
@@ -83,7 +83,7 @@ http_interactions:
         for signs of unstable snow such as recent avalanches, cracking in the snow,
         and audible collapsing. Avoid traveling on or under similar slopes.","danger":"no
         rating","danger_level":-1,"color":"#888888","stroke":"#104efb","font_color":"#ffffff","link":"http:\/\/www.nwac.us\/avalanche-forecast\/#\/east-slopes-south","start_date":"2022-11-04T22:00:00","end_date":"2022-11-17T02:30:00","fillOpacity":0.5,"fillIncrement":0.1,"warning":{"product":null}},"geometry":{"type":"Polygon","coordinates":[[[-121.2752,47.1902],[-120.9853,47.079],[-120.7385,46.9962],[-120.7286,46.7882],[-120.7285,46.7724],[-120.7361,46.7588],[-120.7936,46.741],[-120.8262,46.7186],[-120.8545,46.6792],[-120.8484,46.5267],[-120.9109,46.4125],[-120.9833,46.1317],[-121.1595,46.0161],[-121.5113,45.8909],[-121.4199,46.1756],[-121.4012,46.2637],[-121.3836,46.2947],[-121.3318,46.3882],[-121.3398,46.5612],[-121.2895,46.6344],[-121.3471,46.7218],[-121.4041,46.7863],[-121.4584,46.8417],[-121.456,46.8917],[-121.4368,46.9169],[-121.4054,46.9414],[-121.2975,47.1426],[-121.2752,47.1902]]]}}],"start_time":null,"end_time":null}'
-  recorded_at: Sat, 05 Nov 2022 19:10:54 GMT
+  recorded_at: Sun, 06 Nov 2022 17:24:46 GMT
 - request:
     method: get
     uri: https://api.avalanche.org/v2/public/products/map-layer/NWAC
@@ -103,7 +103,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 05 Nov 2022 19:10:54 GMT
+      - Sun, 06 Nov 2022 17:24:46 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -167,7 +167,7 @@ http_interactions:
         for signs of unstable snow such as recent avalanches, cracking in the snow,
         and audible collapsing. Avoid traveling on or under similar slopes.","danger":"no
         rating","danger_level":-1,"color":"#888888","stroke":"#104efb","font_color":"#ffffff","link":"http:\/\/www.nwac.us\/avalanche-forecast\/#\/east-slopes-south","start_date":"2022-11-04T22:00:00","end_date":"2022-11-17T02:30:00","fillOpacity":0.5,"fillIncrement":0.1,"warning":{"product":null}},"geometry":{"type":"Polygon","coordinates":[[[-121.2752,47.1902],[-120.9853,47.079],[-120.7385,46.9962],[-120.7286,46.7882],[-120.7285,46.7724],[-120.7361,46.7588],[-120.7936,46.741],[-120.8262,46.7186],[-120.8545,46.6792],[-120.8484,46.5267],[-120.9109,46.4125],[-120.9833,46.1317],[-121.1595,46.0161],[-121.5113,45.8909],[-121.4199,46.1756],[-121.4012,46.2637],[-121.3836,46.2947],[-121.3318,46.3882],[-121.3398,46.5612],[-121.2895,46.6344],[-121.3471,46.7218],[-121.4041,46.7863],[-121.4584,46.8417],[-121.456,46.8917],[-121.4368,46.9169],[-121.4054,46.9414],[-121.2975,47.1426],[-121.2752,47.1902]]]}}],"start_time":null,"end_time":null}'
-  recorded_at: Sat, 05 Nov 2022 19:10:54 GMT
+  recorded_at: Sun, 06 Nov 2022 17:24:46 GMT
 - request:
     method: get
     uri: https://api.openweathermap.org/data/3.0/onecall?appid=4629ddd2925e26386120921b9b369703&exclude=minutely,hourly&lat=47.98&lon=-123.49&units=imperial
@@ -189,11 +189,11 @@ http_interactions:
       Server:
       - openresty
       Date:
-      - Sat, 05 Nov 2022 19:10:55 GMT
+      - Sun, 06 Nov 2022 17:24:47 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
-      - '6025'
+      - '5082'
       Connection:
       - keep-alive
       X-Cache-Key:
@@ -206,33 +206,80 @@ http_interactions:
       - GET, POST
     body:
       encoding: UTF-8
-      string: '{"lat":47.98,"lon":-123.49,"timezone":"America/Los_Angeles","timezone_offset":-25200,"current":{"dt":1667675455,"sunrise":1667660710,"sunset":1667695796,"temp":27.93,"feels_like":15.33,"pressure":1011,"humidity":78,"dew_point":22.66,"uvi":0.65,"clouds":0,"visibility":10000,"wind_speed":19.57,"wind_deg":260,"wind_gust":27.63,"weather":[{"id":600,"main":"Snow","description":"light
-        snow","icon":"13d"}],"snow":{"1h":0.31}},"daily":[{"dt":1667674800,"sunrise":1667660710,"sunset":1667695796,"moonrise":1667692500,"moonset":1667648700,"moon_phase":0.41,"temp":{"day":27.93,"min":19.2,"max":28.31,"night":21.43,"eve":21.81,"morn":25.99},"feels_like":{"day":20.75,"night":12.92,"eve":13.53,"morn":17.8},"pressure":1011,"humidity":78,"dew_point":22.66,"wind_speed":10.22,"wind_deg":246,"wind_gust":34.14,"weather":[{"id":601,"main":"Snow","description":"snow","icon":"13d"}],"clouds":0,"pop":0.76,"snow":8.89,"uvi":0.77},{"dt":1667761200,"sunrise":1667747203,"sunset":1667782109,"moonrise":1667779920,"moonset":1667736000,"moon_phase":0.45,"temp":{"day":26.89,"min":19.45,"max":27.75,"night":19.45,"eve":23.79,"morn":23.36},"feels_like":{"day":26.89,"night":14.9,"eve":23.79,"morn":16.61},"pressure":1000,"humidity":89,"dew_point":28.54,"wind_speed":7.25,"wind_deg":168,"wind_gust":13.96,"weather":[{"id":601,"main":"Snow","description":"snow","icon":"13d"}],"clouds":100,"pop":1,"snow":39.49,"uvi":1.06},{"dt":1667847600,"sunrise":1667833696,"sunset":1667868424,"moonrise":1667867460,"moonset":1667830440,"moon_phase":0.48,"temp":{"day":18.41,"min":9.36,"max":19.69,"night":9.36,"eve":14.95,"morn":13.77},"feels_like":{"day":10.8,"night":2.7,"eve":7.38,"morn":13.77},"pressure":1007,"humidity":95,"dew_point":21.49,"wind_speed":5.99,"wind_deg":44,"wind_gust":10.22,"weather":[{"id":601,"main":"Snow","description":"snow","icon":"13d"}],"clouds":100,"pop":1,"snow":22.54,"uvi":0.63},{"dt":1667934000,"sunrise":1667920189,"sunset":1667954740,"moonrise":1667955120,"moonset":1667921280,"moon_phase":0.5,"temp":{"day":14.5,"min":6.03,"max":16.11,"night":10.08,"eve":8.71,"morn":6.04},"feels_like":{"day":6.57,"night":0.64,"eve":1.06,"morn":-2.02},"pressure":1021,"humidity":94,"dew_point":16.95,"wind_speed":5.55,"wind_deg":165,"wind_gust":8.84,"weather":[{"id":600,"main":"Snow","description":"light
-        snow","icon":"13d"}],"clouds":94,"pop":0.4,"snow":1.31,"uvi":0.96},{"dt":1668020400,"sunrise":1668006682,"sunset":1668041059,"moonrise":1668043140,"moonset":1668012060,"moon_phase":0.54,"temp":{"day":23.81,"min":9.19,"max":24.37,"night":13.44,"eve":16.97,"morn":9.68},"feels_like":{"day":23.81,"night":5.27,"eve":16.97,"morn":0.45},"pressure":1020,"humidity":90,"dew_point":25.61,"wind_speed":5.84,"wind_deg":170,"wind_gust":5.44,"weather":[{"id":801,"main":"Clouds","description":"few
-        clouds","icon":"02d"}],"clouds":11,"pop":0,"uvi":1.41},{"dt":1668106800,"sunrise":1668093175,"sunset":1668127379,"moonrise":1668131580,"moonset":1668102660,"moon_phase":0.58,"temp":{"day":24.85,"min":12.67,"max":25.97,"night":18.19,"eve":24.58,"morn":12.67},"feels_like":{"day":24.85,"night":11.07,"eve":20.93,"morn":3.7},"pressure":1026,"humidity":94,"dew_point":27.93,"wind_speed":5.68,"wind_deg":180,"wind_gust":4.29,"weather":[{"id":802,"main":"Clouds","description":"scattered
-        clouds","icon":"03d"}],"clouds":38,"pop":0,"uvi":2},{"dt":1668193200,"sunrise":1668179668,"sunset":1668213701,"moonrise":1668220500,"moonset":1668192900,"moon_phase":0.61,"temp":{"day":26.38,"min":19.06,"max":26.82,"night":22.39,"eve":26.58,"morn":20.57},"feels_like":{"day":26.38,"night":16.52,"eve":26.58,"morn":14.77},"pressure":1016,"humidity":99,"dew_point":30.45,"wind_speed":4.65,"wind_deg":159,"wind_gust":4.32,"weather":[{"id":600,"main":"Snow","description":"light
-        snow","icon":"13d"}],"clouds":98,"pop":0.36,"snow":0.42,"uvi":2},{"dt":1668279600,"sunrise":1668266160,"sunset":1668300025,"moonrise":1668310020,"moonset":1668282600,"moon_phase":0.64,"temp":{"day":27.7,"min":20.66,"max":27.7,"night":20.73,"eve":26.22,"morn":23.56},"feels_like":{"day":27.7,"night":12.52,"eve":22.75,"morn":18.64},"pressure":1020,"humidity":100,"dew_point":32.04,"wind_speed":6.31,"wind_deg":173,"wind_gust":4.54,"weather":[{"id":804,"main":"Clouds","description":"overcast
-        clouds","icon":"04d"}],"clouds":100,"pop":0,"uvi":2}],"alerts":[{"sender_name":"NWS
-        Seattle (Northwest Washington)","event":"Flood Watch","start":1667639040,"end":1667692800,"description":".Heavy
-        rain has come to an end over the area early Saturday morning.\n...FLOOD WATCH
-        REMAINS IN EFFECT THROUGH THIS AFTERNOON...\n* WHAT...Flooding caused by excessive
-        rainfall continues to be\npossible.\n* WHERE...Portions of northwest Washington
-        and west central\nWashington, including the following counties, in northwest\nWashington,
-        Clallam, Grays Harbor, Jefferson, Skagit and Whatcom.\nIn west central Washington,
-        King, Lewis, Pierce, Snohomish and\nThurston.\n* WHEN...Through this afternoon.\n*
-        IMPACTS...Excessive runoff may result in flooding of rivers,\ncreeks, streams,
-        and other low-lying and flood-prone locations.\nFlooding may occur in poor
-        drainage and urban areas. Storm drains\nand ditches may become clogged with
-        debris. Area creeks and\nstreams are running high and could flood with more
-        heavy rain.\n* ADDITIONAL DETAILS...\n- Heavy rain has come to an end over
-        the area early Saturday\nmorning. The upper reaches of the rivers have crested
-        or will\ncrest this morning. The lower reaches will crest this\nafternoon.\n-
-        http://www.weather.gov/safety/flood","tags":["Flood"]},{"sender_name":"NWS
-        Seattle (Northwest Washington)","event":"Winter Weather Advisory","start":1667714400,"end":1667779200,"description":"...WINTER
-        WEATHER ADVISORY IN EFFECT FROM 11 PM PDT THIS EVENING\nTO 4 PM PST SUNDAY
-        ABOVE 2000 FEET...\n* WHAT...Snow expected above 2000 feet. Total snow accumulations\nof
-        2 to 13 inches.\n* WHERE...Olympic mountains and valleys, including Hurricane\nRidge.\n*
-        WHEN...From 11 PM PDT this evening to 4 PM PST Sunday.\n* IMPACTS...Plan on
-        very difficult travel.","tags":[]}]}'
-  recorded_at: Sat, 05 Nov 2022 19:10:55 GMT
+      string: '{"lat":47.98,"lon":-123.49,"timezone":"America/Los_Angeles","timezone_offset":-28800,"current":{"dt":1667755487,"sunrise":1667747203,"sunset":1667782109,"temp":24.3,"feels_like":19.92,"pressure":998,"humidity":77,"dew_point":18.82,"uvi":0.25,"clouds":100,"visibility":10000,"wind_speed":3.44,"wind_deg":340,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04d"}]},"daily":[{"dt":1667761200,"sunrise":1667747203,"sunset":1667782109,"moonrise":1667779920,"moonset":1667736000,"moon_phase":0.45,"temp":{"day":25.56,"min":20.93,"max":26.46,"night":20.93,"eve":24.01,"morn":24.3},"feels_like":{"day":25.56,"night":16.05,"eve":24.01,"morn":18.48},"pressure":999,"humidity":82,"dew_point":21.36,"wind_speed":6.82,"wind_deg":169,"wind_gust":12.71,"weather":[{"id":601,"main":"Snow","description":"snow","icon":"13d"}],"clouds":97,"pop":1,"snow":41.6,"uvi":1.06},{"dt":1667847600,"sunrise":1667833696,"sunset":1667868424,"moonrise":1667867460,"moonset":1667830440,"moon_phase":0.48,"temp":{"day":17.98,"min":10.94,"max":19.87,"night":10.94,"eve":14.76,"morn":16},"feels_like":{"day":9.63,"night":4.51,"eve":8.28,"morn":9.18},"pressure":1007,"humidity":96,"dew_point":21.31,"wind_speed":5.91,"wind_deg":40,"wind_gust":9.75,"weather":[{"id":601,"main":"Snow","description":"snow","icon":"13d"}],"clouds":100,"pop":0.92,"snow":16.72,"uvi":0.63},{"dt":1667934000,"sunrise":1667920189,"sunset":1667954740,"moonrise":1667955120,"moonset":1667921280,"moon_phase":0.5,"temp":{"day":15.51,"min":4.28,"max":17.29,"night":10.18,"eve":9.66,"morn":4.86},"feels_like":{"day":7.97,"night":0.88,"eve":0.68,"morn":-2.33},"pressure":1021,"humidity":92,"dew_point":17.47,"wind_speed":5.46,"wind_deg":167,"wind_gust":7.23,"weather":[{"id":600,"main":"Snow","description":"light
+        snow","icon":"13d"}],"clouds":72,"pop":0.4,"snow":0.11,"uvi":0.96},{"dt":1668020400,"sunrise":1668006682,"sunset":1668041059,"moonrise":1668043140,"moonset":1668012060,"moon_phase":0.54,"temp":{"day":23.34,"min":11.01,"max":25.14,"night":14.13,"eve":22.32,"morn":11.68},"feels_like":{"day":23.34,"night":5.77,"eve":22.32,"morn":2.35},"pressure":1020,"humidity":86,"dew_point":24.06,"wind_speed":6.02,"wind_deg":187,"wind_gust":4.16,"weather":[{"id":803,"main":"Clouds","description":"broken
+        clouds","icon":"04d"}],"clouds":76,"pop":0,"uvi":1.41},{"dt":1668106800,"sunrise":1668093175,"sunset":1668127379,"moonrise":1668131580,"moonset":1668102660,"moon_phase":0.58,"temp":{"day":25.43,"min":14.86,"max":25.88,"night":23.04,"eve":25.83,"morn":15.6},"feels_like":{"day":25.43,"night":18.93,"eve":25.83,"morn":7.23},"pressure":1026,"humidity":95,"dew_point":28.58,"wind_speed":5.66,"wind_deg":183,"wind_gust":4.88,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04d"}],"clouds":100,"pop":0,"uvi":2},{"dt":1668193200,"sunrise":1668179668,"sunset":1668213701,"moonrise":1668220500,"moonset":1668192900,"moon_phase":0.61,"temp":{"day":27.12,"min":22.42,"max":28,"night":22.42,"eve":27.19,"morn":22.82},"feels_like":{"day":27.12,"night":16.66,"eve":27.19,"morn":18.37},"pressure":1017,"humidity":99,"dew_point":31.15,"wind_speed":4.27,"wind_deg":185,"wind_gust":5.28,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04d"}],"clouds":100,"pop":0,"uvi":2},{"dt":1668279600,"sunrise":1668266160,"sunset":1668300025,"moonrise":1668310020,"moonset":1668282600,"moon_phase":0.64,"temp":{"day":28.63,"min":21.27,"max":28.63,"night":21.27,"eve":27.79,"morn":25.21},"feels_like":{"day":28.63,"night":13.28,"eve":27.79,"morn":21.36},"pressure":1018,"humidity":99,"dew_point":32.65,"wind_speed":6.2,"wind_deg":181,"wind_gust":4.34,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04d"}],"clouds":100,"pop":0,"uvi":2},{"dt":1668366000,"sunrise":1668352652,"sunset":1668386351,"moonrise":1668400020,"moonset":1668371640,"moon_phase":0.67,"temp":{"day":29.14,"min":20.71,"max":29.23,"night":21.76,"eve":27.55,"morn":21.04},"feels_like":{"day":29.14,"night":14.49,"eve":27.55,"morn":13.05},"pressure":1025,"humidity":98,"dew_point":33.17,"wind_speed":6.22,"wind_deg":181,"wind_gust":4.34,"weather":[{"id":802,"main":"Clouds","description":"scattered
+        clouds","icon":"03d"}],"clouds":39,"pop":0,"uvi":2}],"alerts":[{"sender_name":"NWS
+        Seattle (Northwest Washington)","event":"Winter Weather Advisory","start":1667723580,"end":1667779200,"description":"...WINTER
+        WEATHER ADVISORY REMAINS IN EFFECT UNTIL 4 PM PST THIS\nAFTERNOON ABOVE 2000
+        FEET...\n* WHAT...Snow above 2000 feet. Additional snow accumulations of 6\nto
+        11 inches.\n* WHERE...Olympic mountains and valleys, including Hurricane\nRidge,
+        Cascade mountains and valleys of Whatcom and Skagit\nCounties, including the
+        Mount Baker Ski Area, Cascade mountains\nand valleys of Snohomish and King
+        Counties, including Stevens\nPass, and Snoqualmie Pass and Cascade mountains
+        and valleys of\nPierce and Lewis Counties, including the Crystal Mountain
+        Ski\nArea, and Paradise on Mount Rainier.\n* WHEN...Until 4 PM PST this afternoon.\n*
+        IMPACTS...Plan on slippery road conditions.","tags":[]}]}'
+  recorded_at: Sun, 06 Nov 2022 17:24:47 GMT
+- request:
+    method: get
+    uri: https://api.openweathermap.org/data/3.0/onecall?appid=4629ddd2925e26386120921b9b369703&exclude=minutely,hourly&lat=47.98&lon=-123.49&units=imperial
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.6.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - openresty
+      Date:
+      - Sun, 06 Nov 2022 17:24:47 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '5082'
+      Connection:
+      - keep-alive
+      X-Cache-Key:
+      - "/data/3.0/onecall?exclude=minutely%2Chourly&lat=47.98&lon=-123.49&units=imperial"
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST
+    body:
+      encoding: UTF-8
+      string: '{"lat":47.98,"lon":-123.49,"timezone":"America/Los_Angeles","timezone_offset":-28800,"current":{"dt":1667755487,"sunrise":1667747203,"sunset":1667782109,"temp":24.3,"feels_like":19.92,"pressure":998,"humidity":77,"dew_point":18.82,"uvi":0.25,"clouds":100,"visibility":10000,"wind_speed":3.44,"wind_deg":340,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04d"}]},"daily":[{"dt":1667761200,"sunrise":1667747203,"sunset":1667782109,"moonrise":1667779920,"moonset":1667736000,"moon_phase":0.45,"temp":{"day":25.56,"min":20.93,"max":26.46,"night":20.93,"eve":24.01,"morn":24.3},"feels_like":{"day":25.56,"night":16.05,"eve":24.01,"morn":18.48},"pressure":999,"humidity":82,"dew_point":21.36,"wind_speed":6.82,"wind_deg":169,"wind_gust":12.71,"weather":[{"id":601,"main":"Snow","description":"snow","icon":"13d"}],"clouds":97,"pop":1,"snow":41.6,"uvi":1.06},{"dt":1667847600,"sunrise":1667833696,"sunset":1667868424,"moonrise":1667867460,"moonset":1667830440,"moon_phase":0.48,"temp":{"day":17.98,"min":10.94,"max":19.87,"night":10.94,"eve":14.76,"morn":16},"feels_like":{"day":9.63,"night":4.51,"eve":8.28,"morn":9.18},"pressure":1007,"humidity":96,"dew_point":21.31,"wind_speed":5.91,"wind_deg":40,"wind_gust":9.75,"weather":[{"id":601,"main":"Snow","description":"snow","icon":"13d"}],"clouds":100,"pop":0.92,"snow":16.72,"uvi":0.63},{"dt":1667934000,"sunrise":1667920189,"sunset":1667954740,"moonrise":1667955120,"moonset":1667921280,"moon_phase":0.5,"temp":{"day":15.51,"min":4.28,"max":17.29,"night":10.18,"eve":9.66,"morn":4.86},"feels_like":{"day":7.97,"night":0.88,"eve":0.68,"morn":-2.33},"pressure":1021,"humidity":92,"dew_point":17.47,"wind_speed":5.46,"wind_deg":167,"wind_gust":7.23,"weather":[{"id":600,"main":"Snow","description":"light
+        snow","icon":"13d"}],"clouds":72,"pop":0.4,"snow":0.11,"uvi":0.96},{"dt":1668020400,"sunrise":1668006682,"sunset":1668041059,"moonrise":1668043140,"moonset":1668012060,"moon_phase":0.54,"temp":{"day":23.34,"min":11.01,"max":25.14,"night":14.13,"eve":22.32,"morn":11.68},"feels_like":{"day":23.34,"night":5.77,"eve":22.32,"morn":2.35},"pressure":1020,"humidity":86,"dew_point":24.06,"wind_speed":6.02,"wind_deg":187,"wind_gust":4.16,"weather":[{"id":803,"main":"Clouds","description":"broken
+        clouds","icon":"04d"}],"clouds":76,"pop":0,"uvi":1.41},{"dt":1668106800,"sunrise":1668093175,"sunset":1668127379,"moonrise":1668131580,"moonset":1668102660,"moon_phase":0.58,"temp":{"day":25.43,"min":14.86,"max":25.88,"night":23.04,"eve":25.83,"morn":15.6},"feels_like":{"day":25.43,"night":18.93,"eve":25.83,"morn":7.23},"pressure":1026,"humidity":95,"dew_point":28.58,"wind_speed":5.66,"wind_deg":183,"wind_gust":4.88,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04d"}],"clouds":100,"pop":0,"uvi":2},{"dt":1668193200,"sunrise":1668179668,"sunset":1668213701,"moonrise":1668220500,"moonset":1668192900,"moon_phase":0.61,"temp":{"day":27.12,"min":22.42,"max":28,"night":22.42,"eve":27.19,"morn":22.82},"feels_like":{"day":27.12,"night":16.66,"eve":27.19,"morn":18.37},"pressure":1017,"humidity":99,"dew_point":31.15,"wind_speed":4.27,"wind_deg":185,"wind_gust":5.28,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04d"}],"clouds":100,"pop":0,"uvi":2},{"dt":1668279600,"sunrise":1668266160,"sunset":1668300025,"moonrise":1668310020,"moonset":1668282600,"moon_phase":0.64,"temp":{"day":28.63,"min":21.27,"max":28.63,"night":21.27,"eve":27.79,"morn":25.21},"feels_like":{"day":28.63,"night":13.28,"eve":27.79,"morn":21.36},"pressure":1018,"humidity":99,"dew_point":32.65,"wind_speed":6.2,"wind_deg":181,"wind_gust":4.34,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04d"}],"clouds":100,"pop":0,"uvi":2},{"dt":1668366000,"sunrise":1668352652,"sunset":1668386351,"moonrise":1668400020,"moonset":1668371640,"moon_phase":0.67,"temp":{"day":29.14,"min":20.71,"max":29.23,"night":21.76,"eve":27.55,"morn":21.04},"feels_like":{"day":29.14,"night":14.49,"eve":27.55,"morn":13.05},"pressure":1025,"humidity":98,"dew_point":33.17,"wind_speed":6.22,"wind_deg":181,"wind_gust":4.34,"weather":[{"id":802,"main":"Clouds","description":"scattered
+        clouds","icon":"03d"}],"clouds":39,"pop":0,"uvi":2}],"alerts":[{"sender_name":"NWS
+        Seattle (Northwest Washington)","event":"Winter Weather Advisory","start":1667723580,"end":1667779200,"description":"...WINTER
+        WEATHER ADVISORY REMAINS IN EFFECT UNTIL 4 PM PST THIS\nAFTERNOON ABOVE 2000
+        FEET...\n* WHAT...Snow above 2000 feet. Additional snow accumulations of 6\nto
+        11 inches.\n* WHERE...Olympic mountains and valleys, including Hurricane\nRidge,
+        Cascade mountains and valleys of Whatcom and Skagit\nCounties, including the
+        Mount Baker Ski Area, Cascade mountains\nand valleys of Snohomish and King
+        Counties, including Stevens\nPass, and Snoqualmie Pass and Cascade mountains
+        and valleys of\nPierce and Lewis Counties, including the Crystal Mountain
+        Ski\nArea, and Paradise on Mount Rainier.\n* WHEN...Until 4 PM PST this afternoon.\n*
+        IMPACTS...Plan on slippery road conditions.","tags":[]}]}'
+  recorded_at: Sun, 06 Nov 2022 17:24:47 GMT
 recorded_with: VCR 6.1.0

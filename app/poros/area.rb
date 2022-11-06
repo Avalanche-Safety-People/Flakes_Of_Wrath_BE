@@ -1,21 +1,21 @@
 class Area
- attr_reader :name,
-             :url,
-             :state,
-             :zone_id,
-             :current_av_risk,
-             :travel_advice,
-             :forecast_date
+  attr_reader :name,
+              :url,
+              :state,
+              :zone_id,
+              :current_av_risk,
+              :travel_advice,
+              :forecast_date
 
- def initialize(data)
-  @name = data[:properties][:name]
-  @url = data[:properties][:link]
-  @state = data[:properties][:state]
-  @current_av_risk = data[:properties][:danger_level]
-  @zone_id = data[:id]
-  @travel_advice = data[:properties][:travel_advice]
-  @forecast_date = data[:properties][:end_date]
- end
+  def initialize(data)
+    @name = data[:properties][:name]
+    @url = data[:properties][:link]
+    @state = data[:properties][:state]
+    @current_av_risk = data[:properties][:danger_level]
+    @zone_id = data[:id]
+    @travel_advice = data[:properties][:travel_advice]
+    @forecast_date = data[:properties][:end_date]
+  end
 
   def av_danger
     av_risk_forecast = [@current_av_risk]
@@ -61,6 +61,6 @@ class Area
       430 => [46.94, -121.08],
       431 => [45.31, -121.77]
     }
-    coordinate_records[self.zone_id]
+    coordinate_records[zone_id]
   end
 end
