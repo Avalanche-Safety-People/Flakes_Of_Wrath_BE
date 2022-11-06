@@ -12,4 +12,14 @@ class Api::V1::UsersController < ApplicationController
     user = User.find(params[:id])
     render json: UserSerializer.new(user)
   end
+
+  def update
+    user = User.find(params[:id])
+    user.assign_attributes(favorite_zone: params[:favorite_zone])
+    if user.save
+      render json: UserSerializer.new(user)
+    else
+      render status: 404
+    end
+  end
 end
