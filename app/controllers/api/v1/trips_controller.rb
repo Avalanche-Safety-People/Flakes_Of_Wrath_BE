@@ -10,18 +10,28 @@ class Api::V1::TripsController < ApplicationController
     render json: TripSerializer.new(trips)
   end
 
+  def update
+    user = User.find(params[:user_id])
+    if user.trips.exists?
+      trip = user.trips.find(params[:id])
+      if trip.update(trip_params)
+        render json: TripSerializer.new(trip)
+      else
+        render json: {error: 'trip unsuccessfully updated'}
+      end
+    else
+      render json: TripSerializer.no_trip
+    end
+  end
+
   def create
     trip = Trip.new(trip_params)
 
     if trip.save
-      render json: TripSerializer.new(trip)
+      render json: TripSerializer.new(trip), status: :created
     else
-      render status: 404
+      render json: {error: 'trip unsuccessfully created'}
     end
-  end
-
-  def update
-    
   end
 
   def destroy
@@ -30,7 +40,8 @@ class Api::V1::TripsController < ApplicationController
   end
   
 private
+
   def trip_params
-    params.permit(:name, :zone_id, :start_date, :description, :user_id)
+    params.fetch(:trip, {}).permit(:name, :zone_id, :start_date, :description, :user_id)
   end
 end
