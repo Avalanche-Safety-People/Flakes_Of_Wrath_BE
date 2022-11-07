@@ -25,40 +25,38 @@ class Area
     future_forecasts = forecasts[1..-1]
     future_forecasts.each do |forecast|
       current_risk = av_risk_forecast.last
+      current_risk = 1 if current_risk == -1
+      current_risk -= 1
       if forecast.avg_wind_speed > 50
+        current_risk += 3
+      elsif forecast.avg_wind_speed > 25 && forecast.avg_wind_speed <= 50
         current_risk += 2
-      elsif forecast.avg_wind_speed > 25
+      elsif forecast.avg_wind_speed > 15
         current_risk += 1
       end
 
-      if forecast.snowfall > 10
+      if forecast.snowfall > 18
+        current_risk += 3
+      elsif forecast.snowfall > 12
         current_risk += 2
-      elsif forecast.snowfall > 4
+      elsif forecast.snowfall >= 6
         current_risk += 1
       end
 
       if forecast.max_temp > 45
         current_risk += 2
-      elsif forecast.max_temp > 34
+      elsif forecast.max_temp > 34 && forecast.min_temp > 32
         current_risk += 1
-      elsif forecast.max_temp < 30
-        current_risk -= 1
+      end
+
+      if current_risk > 5
+        current_risk = 5
+      elsif current_risk < 1
+        current_risk = 1
       end
       av_risk_forecast << current_risk
     end
-    av_risk_normalizer(av_risk_forecast)
-  end
-
-  def av_risk_normalizer(av_risk_forecast)
-    av_risk_forecast.map do |day|
-      if day > 5
-        day = 5
-      elsif day < 1
-        day = 1
-      else
-        day
-      end
-    end
+    av_risk_forecast
   end
 
   def lat_long
