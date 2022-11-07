@@ -59,5 +59,23 @@ RSpec.describe 'User trips' do
         expect{Trip.find(trip_data.id)}.to raise_error(ActiveRecord::RecordNotFound)
       end
     end
+
+    it 'can update an existing trip' do
+      user = create(:user)
+      trip_data = create(:trip, user_id: user.id)
+
+      new_trip_params = {  }
+      headers = {"CONTENT_TYPE" => "application/json"}
+      
+      patch "/api/v1/users/#{@user.id}/trips", headers: headers, params: JSON.generate({trip: new_trip_params})
+
+      expect(response).to be_successful
+      expect(response).to have_http_status(200)
+
+      trip = Trip.last
+      expect(trip_data.name).to eq(new_trip_params)
+      expect(trip_data.phone_number).to eq(trip_data)
+      expect(trip_data.user_id).to eq(trip_data)
+    end
   end
 end
