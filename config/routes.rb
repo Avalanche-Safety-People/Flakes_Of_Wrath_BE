@@ -6,7 +6,8 @@ Rails.application.routes.draw do
       get '/', to: 'landing#index'
       
       resources :users, only: %i[index show update] do
-        resources :trips, only: %i[create show index destroy]
+        resources :trips, only: %i[create show index update destroy]
+          patch '/trips', to: 'trips#update'
         resources :emergency_contacts, only: %i[index create update destroy]
          patch '/emergency_contacts', to: 'emergency_contacts#update'
       end

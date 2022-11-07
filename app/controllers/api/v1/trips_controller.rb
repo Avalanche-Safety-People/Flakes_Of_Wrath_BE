@@ -20,6 +20,10 @@ class Api::V1::TripsController < ApplicationController
     end
   end
 
+  def update
+    
+  end
+
   def destroy
     trip = Trip.find(params[:id])
     trip.destroy

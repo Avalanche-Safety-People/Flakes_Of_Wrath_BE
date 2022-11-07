@@ -62,20 +62,22 @@ RSpec.describe 'User trips' do
 
     it 'can update an existing trip' do
       user = create(:user)
-      trip_data = create(:trip, user_id: user.id)
+      trip = create(:trip, user_id: user.id)
 
-      new_trip_params = {  }
+      new_trip_params = { name: "Ryan's Ski Party(feat Jake)", start_date: Date.new(2023, 3, 2) }
       headers = {"CONTENT_TYPE" => "application/json"}
       
-      patch "/api/v1/users/#{@user.id}/trips", headers: headers, params: JSON.generate({trip: new_trip_params})
+      patch "/api/v1/users/#{user.id}/trips/#{trip.id}", headers: headers, params: JSON.generate({trip: new_trip_params})
 
       expect(response).to be_successful
       expect(response).to have_http_status(200)
 
-      trip = Trip.last
-      expect(trip_data.name).to eq(new_trip_params)
-      expect(trip_data.phone_number).to eq(trip_data)
-      expect(trip_data.user_id).to eq(trip_data)
+      latest_trip = Trip.last
+      expect(latest_trip.name).to eq(new_trip_params[:name])
+      expect(latest_trip.zone_id).to eq(trip.zone_id)
+      expect(latest_trip.start_date).to eq(new_trip_params[:start_date])
+      expect(latest_trip.description).to eq(trip.description)
+      expect(latest_trip.user_id).to eq(trip.user_id)
     end
   end
 end
