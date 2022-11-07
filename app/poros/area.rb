@@ -5,7 +5,8 @@ class Area
              :id,
              :current_av_risk,
              :travel_advice,
-             :forecast_date
+             :end_date,
+             :start_date
 
   def initialize(data)
     @name = data[:properties][:name]
@@ -14,7 +15,8 @@ class Area
     @current_av_risk = data[:properties][:danger_level]
     @id = data[:id]
     @travel_advice = data[:properties][:travel_advice]
-    @forecast_date = data[:properties][:end_date]
+    @start_date = data[:properties][:start_date]
+    @end_date = data[:properties][:end_date]
   end
 
   def av_danger
@@ -42,10 +44,21 @@ class Area
       elsif forecast.max_temp < 30
         current_risk -= 1
       end
-
       av_risk_forecast << current_risk
     end
-    av_risk_forecast
+    av_risk_normalizer(av_risk_forecast)
+  end
+
+  def av_risk_normalizer(av_risk_forecast)
+    av_risk_forecast.map do |day|
+      if day > 5
+        day = 5
+      elsif day < 1
+        day = 1
+      else
+        day
+      end
+    end
   end
 
   def lat_long
