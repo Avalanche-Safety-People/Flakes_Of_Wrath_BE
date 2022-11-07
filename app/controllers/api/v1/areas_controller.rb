@@ -1,7 +1,7 @@
 class Api::V1::AreasController < ApplicationController
   def index
     @areas = AreaFacade.area_details
-    render json: AreaSerializer.new(@areas)
+   render json: AreaSerializer.new(@areas)
   end
 
   def show
