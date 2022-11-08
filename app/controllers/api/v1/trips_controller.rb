@@ -14,12 +14,7 @@ class Api::V1::TripsController < ApplicationController
     user = User.find(params[:user_id])
     if user.trips.exists?
       trip = user.trips.find(params[:id])
-      trip.assign_attributes(name: params[:name], 
-        zone_id: params[:zone_id], 
-        start_date: params[:start_date], 
-        description: params[:description], 
-        user_id: params[:user_id])
-      if trip.save
+      if trip.update(trip_params)
         render json: TripSerializer.new(trip)
       else
         render json: {error: 'trip unsuccessfully updated'}
