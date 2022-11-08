@@ -122,5 +122,13 @@ RSpec.describe "EmergencyContacts", type: :request do
       expect(contact[:data][:attributes][:user_id]).to eq(@user.id)
     end
 
+    it 'can delete an emergency contact' do
+      contacts = create_list(:emergency_contact, 5, user_id: @user.id)
+      expect(contacts.length).to eq(5)
+      delete "/api/v1/users/#{@user.id}/emergency_contacts/#{contacts[1].id}"
+      expect(response).to be_successful
+      expect(EmergencyContact.all.length).to eq(4)
+    end
+
   end
 end
