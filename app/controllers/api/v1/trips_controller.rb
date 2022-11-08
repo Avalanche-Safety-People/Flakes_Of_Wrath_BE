@@ -14,7 +14,12 @@ class Api::V1::TripsController < ApplicationController
     user = User.find(params[:user_id])
     if user.trips.exists?
       trip = user.trips.find(params[:id])
-      if trip.update(trip_params)
+      trip.assign_attributes(name: params[:name], 
+        zone_id: params[:zone_id], 
+        start_date: params[:start_date], 
+        description: params[:description], 
+        user_id: params[:user_id])
+      if trip.save
         render json: TripSerializer.new(trip)
       else
         render json: {error: 'trip unsuccessfully updated'}
@@ -42,6 +47,6 @@ class Api::V1::TripsController < ApplicationController
 private
 
   def trip_params
-    params.fetch(:trip, {}).permit(:name, :zone_id, :start_date, :description, :user_id)
+    params.permit(:name, :zone_id, :start_date, :description, :user_id)
   end
 end

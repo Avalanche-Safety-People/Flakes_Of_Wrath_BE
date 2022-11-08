@@ -67,7 +67,7 @@ RSpec.describe 'User trips' do
       new_trip_params = { name: "Ryan's Ski Party feat Jake", start_date: Date.new(2023, 3, 2) }
       headers = {"CONTENT_TYPE" => "application/json"}
       
-      patch "/api/v1/users/#{user.id}/trips/#{trip.id}", headers: headers, params: JSON.generate({trip: new_trip_params})
+      patch "/api/v1/users/#{trip.user_id}/trips/#{trip.id}", headers: headers, params: JSON.generate({trip: new_trip_params})
 
       expect(response).to be_successful
       expect(response).to have_http_status(200)
