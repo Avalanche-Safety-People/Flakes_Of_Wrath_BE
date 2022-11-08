@@ -10,6 +10,10 @@ class Api::V1::EmergencyContactsController < ApplicationController
     render json: EmergencyContactSerializer.new(EmergencyContact.all)
   end
 
+  def show
+    render json: EmergencyContactSerializer.new(EmergencyContact.find_by(id: params[:id], user_id: params[:user_id]))
+  end
+
   def update
     user = User.find(params[:user_id])
     if user.emergency_contacts != []
