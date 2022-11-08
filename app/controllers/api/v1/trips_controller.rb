@@ -42,6 +42,6 @@ class Api::V1::TripsController < ApplicationController
 private
 
   def trip_params
-    params.fetch(:trip, {}).permit(:name, :zone_id, :start_date, :description, :user_id)
+    params.permit(:name, :zone_id, :start_date, :description, :user_id)
   end
 end

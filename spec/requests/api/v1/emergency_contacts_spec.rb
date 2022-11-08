@@ -28,22 +28,22 @@ RSpec.describe "EmergencyContacts", type: :request do
 
       new_emergency_contact_params = { name: "Mr. Brightside" }
       headers = {"CONTENT_TYPE" => "application/json"}
-      
-      patch "/api/v1/users/#{@user.id}/emergency_contacts", headers: headers, params: JSON.generate({emergency_contact: new_emergency_contact_params})
+
+      patch "/api/v1/users/#{@user.id}/emergency_contacts/#{emergency_contact.id}", headers: headers, params: JSON.generate({emergency_contact: new_emergency_contact_params})
 
       expect(response).to be_successful
       expect(response).to have_http_status(200)
+      updated_emergency_contact = EmergencyContact.last
 
-      emergency_contact = EmergencyContact.last
-      expect(emergency_contact.name).to eq(new_emergency_contact_params[:name])
-      expect(emergency_contact.phone_number).to eq(emergency_contact.phone_number)
-      expect(emergency_contact.user_id).to eq(emergency_contact.user_id)
+      expect(updated_emergency_contact.name).to eq(new_emergency_contact_params[:name])
+      expect(updated_emergency_contact.phone_number).to eq(emergency_contact.phone_number)
+      expect(updated_emergency_contact.user_id).to eq(emergency_contact.user_id)
     end
 
     it 'will return a data hash with a nil id if no contact is found' do
       new_emergency_contact_params = { name: "Mr. Brightside" }
       headers = {"CONTENT_TYPE" => "application/json"}
-      
+
       patch "/api/v1/users/#{@user.id}/emergency_contacts", headers: headers, params: JSON.generate({emergency_contact: new_emergency_contact_params})
 
       expect(response.body).to eq('{"data":{"id":null,"type":"emergency_contact"}}')
@@ -54,7 +54,7 @@ RSpec.describe "EmergencyContacts", type: :request do
 
       new_emergency_contact_params = { name: "" }
       headers = {"CONTENT_TYPE" => "application/json"}
-      
+
       patch "/api/v1/users/#{@user.id}/emergency_contacts", headers: headers, params: JSON.generate({emergency_contact: new_emergency_contact_params})
 
       error_response = JSON.parse(response.body, symbolize_names: true)
@@ -73,14 +73,14 @@ RSpec.describe "EmergencyContacts", type: :request do
         expect(response).to be_successful
 
         contacts = JSON.parse(response.body, symbolize_names: true)
- 
+
         contacts[:data].each do |data|
           expect(data[:attributes]).to have_key(:name)
           expect(data[:attributes][:name]).to be_a(String)
-  
+
           expect(data[:attributes]).to have_key(:phone_number)
           expect(data[:attributes][:phone_number]).to be_a(String)
-  
+
           expect(data[:attributes]).to have_key(:user_id)
           expect(data[:attributes][:user_id]).to be_an(Integer)
         end
