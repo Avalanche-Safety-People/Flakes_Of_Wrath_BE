@@ -100,5 +100,30 @@ RSpec.describe "EmergencyContacts", type: :request do
         expect{EmergencyContact.find(emergency_contact.id)}.to raise_error(ActiveRecord::RecordNotFound)
       end
     end
+
+
+    it "can retrieve one emergency contact" do
+      emergency_contact = create(:emergency_contact, user_id: @user.id)
+
+      get "/api/v1/users/#{@user.id}/emergency_contacts/#{emergency_contact.id}"
+
+      expect(response).to be_successful
+
+      contact = JSON.parse(response.body, symbolize_names: true)
+
+      expect(contact[:data]).to have_key(:id)
+      expect(contact[:data][:id]).to eq(emergency_contact.id.to_s)
+
+      expect(contact[:data][:attributes]).to have_key(:name)
+      expect(contact[:data][:attributes][:name]).to be_a(String)
+
+      expect(contact[:data][:attributes]).to have_key(:phone_number)
+      expect(contact[:data][:attributes][:phone_number]).to be_a(String)
+
+      expect(contact[:data][:attributes]).to have_key(:user_id)
+      expect(contact[:data][:attributes][:user_id]).to be_an(Integer)
+      expect(contact[:data][:attributes][:user_id]).to eq(@user.id)
+    end
+
   end
 end
