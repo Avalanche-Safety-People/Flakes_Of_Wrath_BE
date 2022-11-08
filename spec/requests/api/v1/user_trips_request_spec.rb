@@ -65,14 +65,15 @@ RSpec.describe 'User trips' do
       trip = create(:trip, user_id: user.id)
 
       new_trip_params = { name: "Ryan's Ski Party feat Jake", start_date: Date.new(2023, 3, 2) }
-      headers = {"CONTENT_TYPE" => "application/json"}
+
       
-      patch "/api/v1/users/#{user.id}/trips/#{trip.id}", headers: headers, params: JSON.generate({trip: new_trip_params})
+      patch "/api/v1/users/#{user.id}/trips/#{trip.id}", params: new_trip_params
 
       expect(response).to be_successful
       expect(response).to have_http_status(200)
 
       trip = Trip.last
+  
       expect(trip.name).to eq(new_trip_params[:name])
       expect(trip.zone_id).to eq(trip.zone_id)
       expect(trip.start_date).to eq(new_trip_params[:start_date])
