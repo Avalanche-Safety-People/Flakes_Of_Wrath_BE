@@ -10,4 +10,13 @@ class AreaSerializer
       }
     }
   end
+
+  def self.no_area_array
+    {
+      "data": [{
+        "id": nil,
+        "type": 'area'
+      }]
+    }
+  end
 end

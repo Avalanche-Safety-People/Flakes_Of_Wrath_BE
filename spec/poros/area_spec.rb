@@ -19,15 +19,15 @@ RSpec.describe Area do
   expect(@area).to be_an_instance_of(Area)
  end
 
- xit 'has attributes', :vcr do
-  expect(@area.name).to eq("West Slopes North")
+ it 'has attributes', :vcr do
+  expect(@area.name).to eq("Olympics")
   expect(@area.name).to be_a String
   expect(@area.state).to eq("WA")
   expect(@area.state).to be_a String
-  expect(@area.url).to eq("http://www.nwac.us/avalanche-forecast/#/west-slopes-north")
+  expect(@area.url).to eq("http://www.nwac.us/avalanche-forecast/#/olympics")
   expect(@area.url).to be_a String
-  expect(@area.zone_id).to eq("4")
-  expect(@area.zone_id).to be_a String
+  expect(@area.id).to eq(419)
+  expect(@area.id).to be_a Integer
  end
 
  it 'can return an 8 day avalanche danger forecast', :vcr do
@@ -38,7 +38,9 @@ RSpec.describe Area do
     expect(area.av_danger.count).to eq 8
   end
 
-  xit 'can return a single area information and av_risk', :vcr do
+  it 'can return a single area information and av_risk', :vcr do
     area = AreaFacade.single_area(419)
+    expect(area.current_av_risk).to be_a Integer
+    expect(area.av_danger).to be_a Array
   end
 end
