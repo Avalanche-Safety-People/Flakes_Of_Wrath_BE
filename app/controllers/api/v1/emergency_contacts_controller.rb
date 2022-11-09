@@ -7,7 +7,10 @@ class Api::V1::EmergencyContactsController < ApplicationController
   end
 
   def index
-    render json: EmergencyContactSerializer.new(EmergencyContact.all)
+    contacts = EmergencyContact.find_by(user_id: params[:user_id])
+    return render json: { error: 'no contacts for this user' }, status: 404 if contacts.nil?
+
+    render json: EmergencyContactSerializer.new(contacts)
   end
 
   def show
