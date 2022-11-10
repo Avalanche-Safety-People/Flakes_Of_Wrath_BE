@@ -143,6 +143,8 @@ This project requires Ruby 2.7.4
   * **/api/v1/users/:user_id/emergency_contacts**
 * PATCH an existing emergency contact for user
   * **/api/v1/users/:user_id/emergency_contacts/:id**
+* GET a forcasted zone
+  * **/api/v1/areas/:id**
 
 <!-- CONTACT -->
 ## Contacts
