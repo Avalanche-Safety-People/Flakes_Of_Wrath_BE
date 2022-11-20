@@ -1,0 +1,51 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.openweathermap.org/data/3.0/onecall?appid=da340bec0df452f76f0fd81ae3215450&exclude=minutely,hourly&lat=47.98&lon=-123.49&units=imperial
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.6.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - openresty
+      Date:
+      - Sun, 20 Nov 2022 18:37:55 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '4314'
+      Connection:
+      - keep-alive
+      X-Cache-Key:
+      - "/data/3.0/onecall?exclude=minutely%2Chourly&lat=47.98&lon=-123.49&units=imperial"
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST
+    body:
+      encoding: UTF-8
+      string: '{"lat":47.98,"lon":-123.49,"timezone":"America/Los_Angeles","timezone_offset":-28800,"current":{"dt":1668969475,"sunrise":1668958081,"sunset":1668990694,"temp":27.27,"feels_like":23.32,"pressure":1026,"humidity":78,"dew_point":21.99,"uvi":0.99,"clouds":0,"visibility":10000,"wind_speed":3.44,"wind_deg":240,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}]},"daily":[{"dt":1668970800,"sunrise":1668958081,"sunset":1668990694,"moonrise":1668943320,"moonset":1668985440,"moon_phase":0.89,"temp":{"day":27.27,"min":27.27,"max":35.37,"night":32,"eve":33.66,"morn":30.76},"feels_like":{"day":27.27,"night":32,"eve":33.66,"morn":27.05},"pressure":1026,"humidity":78,"dew_point":21.99,"wind_speed":3.83,"wind_deg":191,"wind_gust":4.41,"weather":[{"id":616,"main":"Snow","description":"rain
+        and snow","icon":"13d"}],"clouds":0,"pop":0.52,"rain":0.4,"snow":1.95,"uvi":1.21},{"dt":1669060800,"sunrise":1669044568,"sunset":1669077038,"moonrise":1669034220,"moonset":1669072920,"moon_phase":0.92,"temp":{"day":40.28,"min":32.27,"max":40.28,"night":34.97,"eve":34.88,"morn":33.03},"feels_like":{"day":37.92,"night":32.4,"eve":34.88,"morn":33.03},"pressure":1022,"humidity":77,"dew_point":37.8,"wind_speed":3.71,"wind_deg":343,"wind_gust":4.29,"weather":[{"id":500,"main":"Rain","description":"light
+        rain","icon":"10d"}],"clouds":40,"pop":0.44,"rain":0.84,"uvi":0.94},{"dt":1669147200,"sunrise":1669131054,"sunset":1669163384,"moonrise":1669125480,"moonset":1669160640,"moon_phase":0.96,"temp":{"day":33.8,"min":30.27,"max":35.65,"night":30.27,"eve":31.68,"morn":35.04},"feels_like":{"day":27.99,"night":23.38,"eve":24.58,"morn":31.28},"pressure":1010,"humidity":94,"dew_point":36.66,"wind_speed":8.3,"wind_deg":223,"wind_gust":20.24,"weather":[{"id":616,"main":"Snow","description":"rain
+        and snow","icon":"13d"}],"clouds":100,"pop":1,"rain":27.15,"snow":0.35,"uvi":0.18},{"dt":1669233600,"sunrise":1669217540,"sunset":1669249732,"moonrise":1669216920,"moonset":1669248720,"moon_phase":0,"temp":{"day":37.38,"min":27.72,"max":37.45,"night":34.07,"eve":33.57,"morn":27.72},"feels_like":{"day":37.38,"night":30.43,"eve":31.1,"morn":21.87},"pressure":1024,"humidity":71,"dew_point":33.08,"wind_speed":7.14,"wind_deg":209,"wind_gust":9.08,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04d"}],"clouds":93,"pop":0,"uvi":1.15},{"dt":1669320000,"sunrise":1669304024,"sunset":1669336083,"moonrise":1669308360,"moonset":1669337460,"moon_phase":0.03,"temp":{"day":39.38,"min":32.02,"max":41.09,"night":32.02,"eve":36.82,"morn":35.78},"feels_like":{"day":34.47,"night":26.15,"eve":29.95,"morn":31.57},"pressure":1022,"humidity":62,"dew_point":31.46,"wind_speed":9.48,"wind_deg":184,"wind_gust":13.6,"weather":[{"id":502,"main":"Rain","description":"heavy
+        intensity rain","icon":"10d"}],"clouds":99,"pop":1,"rain":11.31,"uvi":2},{"dt":1669406400,"sunrise":1669390507,"sunset":1669422437,"moonrise":1669399560,"moonset":1669427100,"moon_phase":0.07,"temp":{"day":31.77,"min":23.67,"max":31.77,"night":27.27,"eve":26.67,"morn":23.67},"feels_like":{"day":31.77,"night":20.43,"eve":18.79,"morn":17.44},"pressure":1025,"humidity":70,"dew_point":27.36,"wind_speed":7.38,"wind_deg":196,"wind_gust":11.27,"weather":[{"id":602,"main":"Snow","description":"heavy
+        snow","icon":"13d"}],"clouds":92,"pop":1,"snow":15.12,"uvi":2},{"dt":1669492800,"sunrise":1669476989,"sunset":1669508792,"moonrise":1669489980,"moonset":1669517640,"moon_phase":0.11,"temp":{"day":28.71,"min":24.17,"max":28.71,"night":24.17,"eve":27.99,"morn":28.27},"feels_like":{"day":21.04,"night":17.35,"eve":21.67,"morn":21.63},"pressure":1009,"humidity":98,"dew_point":32.59,"wind_speed":8.08,"wind_deg":188,"wind_gust":14.16,"weather":[{"id":602,"main":"Snow","description":"heavy
+        snow","icon":"13d"}],"clouds":100,"pop":1,"snow":135.93,"uvi":2},{"dt":1669579200,"sunrise":1669563470,"sunset":1669595151,"moonrise":1669579380,"moonset":1669608780,"moon_phase":0.15,"temp":{"day":26.85,"min":15.6,"max":26.85,"night":15.6,"eve":15.93,"morn":18.43},"feels_like":{"day":26.85,"night":8.51,"eve":7.9,"morn":10.15},"pressure":1007,"humidity":81,"dew_point":25.84,"wind_speed":7.18,"wind_deg":211,"wind_gust":9.35,"weather":[{"id":601,"main":"Snow","description":"snow","icon":"13d"}],"clouds":95,"pop":0.79,"snow":3.24,"uvi":2}]}'
+  recorded_at: Sun, 20 Nov 2022 18:37:55 GMT
+recorded_with: VCR 6.1.0

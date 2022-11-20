@@ -1,0 +1,58 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.openweathermap.org/data/3.0/onecall?appid=da340bec0df452f76f0fd81ae3215450&exclude=minutely,hourly&lat=47.427&lon=-121.418&units=imperial
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.6.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - openresty
+      Date:
+      - Sun, 20 Nov 2022 18:37:55 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '4867'
+      Connection:
+      - keep-alive
+      X-Cache-Key:
+      - "/data/3.0/onecall?exclude=minutely%2Chourly&lat=47.43&lon=-121.42&units=imperial"
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST
+    body:
+      encoding: UTF-8
+      string: '{"lat":47.427,"lon":-121.418,"timezone":"America/Los_Angeles","timezone_offset":-28800,"current":{"dt":1668969475,"sunrise":1668957473,"sunset":1668990307,"temp":38.73,"feels_like":38.73,"pressure":1026,"humidity":38,"dew_point":17.17,"uvi":1.07,"clouds":31,"visibility":10000,"wind_speed":1.99,"wind_deg":148,"wind_gust":2.84,"weather":[{"id":802,"main":"Clouds","description":"scattered
+        clouds","icon":"03d"}]},"daily":[{"dt":1668970800,"sunrise":1668957473,"sunset":1668990307,"moonrise":1668942780,"moonset":1668984960,"moon_phase":0.89,"temp":{"day":38.73,"min":26.82,"max":41.32,"night":35.62,"eve":32.25,"morn":28},"feels_like":{"day":38.73,"night":35.62,"eve":32.25,"morn":22.01},"pressure":1026,"humidity":38,"dew_point":17.17,"wind_speed":6.24,"wind_deg":106,"wind_gust":7.76,"weather":[{"id":802,"main":"Clouds","description":"scattered
+        clouds","icon":"03d"}],"clouds":31,"pop":0,"uvi":1.26},{"dt":1669057200,"sunrise":1669043959,"sunset":1669076652,"moonrise":1669033680,"moonset":1669072500,"moon_phase":0.92,"temp":{"day":41.32,"min":33.49,"max":42.3,"night":35.37,"eve":37.69,"morn":35.76},"feels_like":{"day":41.32,"night":32.05,"eve":37.69,"morn":35.76},"pressure":1025,"humidity":75,"dew_point":32.4,"wind_speed":4.03,"wind_deg":116,"wind_gust":4.03,"weather":[{"id":600,"main":"Snow","description":"light
+        snow","icon":"13d"}],"clouds":76,"pop":0.25,"snow":0.1,"uvi":0.78},{"dt":1669143600,"sunrise":1669130444,"sunset":1669163000,"moonrise":1669124880,"moonset":1669160220,"moon_phase":0.96,"temp":{"day":39.51,"min":33.21,"max":39.51,"night":36.93,"eve":33.21,"morn":33.75},"feels_like":{"day":35.78,"night":32.59,"eve":28.54,"morn":29.68},"pressure":1016,"humidity":78,"dew_point":31.59,"wind_speed":6.02,"wind_deg":123,"wind_gust":18.14,"weather":[{"id":501,"main":"Rain","description":"moderate
+        rain","icon":"10d"}],"clouds":100,"pop":1,"rain":25.07,"uvi":0.48},{"dt":1669230000,"sunrise":1669216928,"sunset":1669249350,"moonrise":1669216260,"moonset":1669248360,"moon_phase":0,"temp":{"day":38.32,"min":32.11,"max":40.23,"night":34,"eve":37.83,"morn":37.31},"feels_like":{"day":38.32,"night":30.51,"eve":37.83,"morn":32.4},"pressure":1025,"humidity":93,"dew_point":35.11,"wind_speed":6.91,"wind_deg":268,"wind_gust":20.49,"weather":[{"id":500,"main":"Rain","description":"light
+        rain","icon":"10d"}],"clouds":97,"pop":0.88,"rain":3.07,"uvi":1.19},{"dt":1669316400,"sunrise":1669303410,"sunset":1669335702,"moonrise":1669307700,"moonset":1669337160,"moon_phase":0.03,"temp":{"day":42.33,"min":33.33,"max":46.74,"night":39,"eve":39.54,"morn":37.02},"feels_like":{"day":39.34,"night":39,"eve":35.78,"morn":32.88},"pressure":1027,"humidity":82,"dew_point":35.67,"wind_speed":5.55,"wind_deg":108,"wind_gust":6.22,"weather":[{"id":803,"main":"Clouds","description":"broken
+        clouds","icon":"04d"}],"clouds":79,"pop":0.05,"uvi":2},{"dt":1669402800,"sunrise":1669389892,"sunset":1669422057,"moonrise":1669398840,"moonset":1669426800,"moon_phase":0.07,"temp":{"day":34.88,"min":31.1,"max":38.5,"night":31.1,"eve":33.76,"morn":36.16},"feels_like":{"day":31.57,"night":28.31,"eve":30.06,"morn":31.03},"pressure":1026,"humidity":92,"dew_point":31.17,"wind_speed":6.22,"wind_deg":275,"wind_gust":13.44,"weather":[{"id":616,"main":"Snow","description":"rain
+        and snow","icon":"13d"}],"clouds":96,"pop":0.97,"rain":5.27,"snow":11.02,"uvi":2},{"dt":1669489200,"sunrise":1669476373,"sunset":1669508414,"moonrise":1669489260,"moonset":1669517280,"moon_phase":0.11,"temp":{"day":34.79,"min":33.19,"max":35.74,"night":34.3,"eve":35.46,"morn":34.02},"feels_like":{"day":30.72,"night":28.31,"eve":29.7,"morn":30.45},"pressure":1016,"humidity":99,"dew_point":33.21,"wind_speed":6.93,"wind_deg":231,"wind_gust":36.28,"weather":[{"id":616,"main":"Snow","description":"rain
+        and snow","icon":"13d"}],"clouds":100,"pop":0.98,"rain":15.44,"snow":43.62,"uvi":2},{"dt":1669575600,"sunrise":1669562852,"sunset":1669594774,"moonrise":1669578720,"moonset":1669608420,"moon_phase":0.15,"temp":{"day":30.15,"min":19.92,"max":31.35,"night":19.92,"eve":28.04,"morn":29.71},"feels_like":{"day":24.42,"night":15.28,"eve":24.8,"morn":21.51},"pressure":1007,"humidity":98,"dew_point":28.09,"wind_speed":8.9,"wind_deg":261,"wind_gust":18.75,"weather":[{"id":601,"main":"Snow","description":"snow","icon":"13d"}],"clouds":99,"pop":1,"snow":24.59,"uvi":2}],"alerts":[{"sender_name":"NWS
+        Pendleton (Northeast Oregon and Southeast Washington)","event":"Air Stagnation
+        Advisory","start":1668932220,"end":1669071600,"description":"...AIR STAGNATION
+        ADVISORY REMAINS IN EFFECT UNTIL 3 PM PST\nMONDAY...\n* WHAT...Poor air quality.\n*
+        WHERE...Portions of central, north central and northeast\nOregon and central,
+        south central and southeast Washington.\n* WHEN...Until 3 PM PST Monday.\n*
+        IMPACTS...Poor air quality may cause issues for people with\nrespiratory problems.","tags":["Air
+        quality"]}]}'
+  recorded_at: Sun, 20 Nov 2022 18:37:55 GMT
+recorded_with: VCR 6.1.0
