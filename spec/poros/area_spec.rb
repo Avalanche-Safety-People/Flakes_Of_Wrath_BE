@@ -12,7 +12,7 @@ RSpec.describe Area do
   #  zone_id: "4"
   # }
   # @area = Area.new(@data)
-    @area = AreaFacade.single_area(419)
+    @area = AreaFacade.single_area(1128)
  end
 
  it 'is an instance of Area', :vcr do
@@ -26,7 +26,7 @@ RSpec.describe Area do
   expect(@area.state).to be_a String
   expect(@area.url).to eq("http://www.nwac.us/avalanche-forecast/#/olympics")
   expect(@area.url).to be_a String
-  expect(@area.id).to eq(419)
+  expect(@area.id).to eq(1128)
   expect(@area.id).to be_a Integer
  end
 
@@ -39,7 +39,7 @@ RSpec.describe Area do
   end
 
   it 'can return a single area information and av_risk', :vcr do
-    area = AreaFacade.single_area(419)
+    area = AreaFacade.single_area(1128)
     expect(area.current_av_risk).to be_a Integer
     expect(area.av_danger).to be_a Array
   end
