@@ -38,7 +38,7 @@ ActiveRecord::Schema.define(version: 2022_11_07_231910) do
     t.string "email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "favorite_zone", default: 427
+    t.integer "favorite_zone", default: 1128
   end
 
   add_foreign_key "emergency_contacts", "users"

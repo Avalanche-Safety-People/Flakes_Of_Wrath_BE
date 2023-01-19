@@ -6,11 +6,11 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-bob = User.create!(uid: "123", provider: "google", name: "bob", email: "bob@gmail.com", favorite_zone: 427)
+bob = User.create!(uid: "123", provider: "google", name: "bob", email: "bob@gmail.com", favorite_zone: 1136)
 sally = User.create!(uid: "123", provider: "google", name: "sally", email: "sally@gmail.com")
 
 bob.emergency_contacts.create!(name: "mommy", phone_number: "1 800 588 2300")
 bob.emergency_contacts.create!(name: "Darth Vader", phone_number: "911")
 
-bob.trips.create!(name: "Adventure is out there", zone_id: 427, start_date: "2023-2-3", description: "very moist")
-bob.trips.create!(name: "Prom Night!", zone_id: 430, start_date: "2023-7-3", description: "#YOLO")
+bob.trips.create!(name: "Adventure is out there", zone_id: 1136, start_date: "2023-2-3", description: "very moist")
+bob.trips.create!(name: "Prom Night!", zone_id: 1139, start_date: "2023-7-3", description: "#YOLO")

@@ -10,7 +10,7 @@ RSpec.describe 'AreasController', type: :request do
   describe 'As a developer, when I query the Area Show endpoint (baseurl/api/v1/area/:area_id)' do
     context "happy path" do
       it 'returns formatted data for a specific area', :vcr do
-        get api_v1_area_path(419)
+        get api_v1_area_path(1128)
 
         json = JSON.parse(response.body, symbolize_names: true)
         expect(json).to be_an Hash
