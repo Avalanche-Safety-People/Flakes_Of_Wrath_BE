@@ -80,6 +80,7 @@ test:
 #
 production:
   <<: *default
-  database: flakes_of_wrath
-  username: flakes_of_wrath
-  password: <%= ENV['FLAKES_OF_WRATH_DATABASE_PASSWORD'] %>
+  # database: flakes_of_wrath
+  # username: flakes_of_wrath
+  # password: <%= ENV['FLAKES_OF_WRATH_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>
